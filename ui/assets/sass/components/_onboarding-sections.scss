@@ -1,0 +1,91 @@
+.assessment-sections {
+  background-color: #F5F8FF;
+  padding: 2rem;
+  margin: 0 -2rem 34px -2rem;
+
+  &__summary {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    margin-bottom: 0.85em;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+    gap: 30px 13px;
+  }
+
+  .section-card {
+    &__pic {
+      overflow: hidden;
+      border-radius: 10px;
+      margin-bottom: 14px;
+
+      img {
+        @extend .fluid_img;
+      }
+    }
+
+    &__content {
+      .title {
+        font-size: 12px;
+        margin-bottom: 4px;
+        display: block;
+      }
+
+      .title-name {
+        font-family: $font_semibold;
+        font-size: 18px;
+        line-height: 1.2;
+        margin-bottom: 0.23em;
+      }
+
+      .info {
+        font-size: 14px;
+        line-height: 1.4;
+      }
+    }
+  }
+}
+
+.users-taken-assessment {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+  gap: 18px;
+
+  .avatars {
+    display: flex;
+    align-items: center;
+
+    .avatar-pic {
+      width: 39px;
+      aspect-ratio: 1;
+      background-color: #fff;
+      box-shadow: 0 0 0 1px #fff;
+      border-radius: 50%;
+      overflow: hidden;
+      position: relative;
+      margin-left: -10px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      img {
+        @extend .fluid_img;
+        aspect-ratio: 1;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .counter-statement {
+    color: #676767;
+    font-size: 14px;
+
+    .counter {
+      font-family: $font_semibold;
+    }
+  }
+}

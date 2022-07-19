@@ -1,0 +1,54 @@
+.school-profile {
+  padding: 20px;
+
+  .fieldset {
+    display: grid;
+    grid-template-columns:30% 1fr;
+    max-width: 1000px;
+
+    .field-label {
+      display: block;
+      font-family: $font_bold;
+      font-size: 16px;
+      color: rgba($blue, 0.85);
+      margin-bottom: 0.6rem;
+    }
+  }
+
+  .school-logo {
+    display: block;
+    background-color: $blue;
+    border: 10px solid $blue;
+    border-radius: 10px;
+  }
+
+  .inline-field {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+    align-items: center;
+
+    .file-upload {
+      margin: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 870px) {
+  .school-profile .fieldset {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 570px) {
+  .school-profile {
+    .inline-field {
+      flex-direction: column;
+    }
+
+    .school-logo {
+      width: 100%;
+      min-height: 82px !important;
+    }
+  }
+}

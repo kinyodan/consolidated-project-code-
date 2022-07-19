@@ -1,0 +1,146 @@
+.recommendations-section {
+  margin-top: 60px;
+  color: rgba(#000, 0.8);
+
+  p {
+    font-size: 18px;
+    margin-bottom: 2rem;
+  }
+}
+
+.recommendations-header {
+  margin-bottom: 40px;
+  padding: 0 36px;
+
+  &__title {
+    font-family: $font_semibold;
+    font-size: 22px;
+    margin-bottom: 0.6em;
+  }
+}
+
+.recommendation-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.course-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+  text-align: center;
+  position: relative;
+  padding: 40px;
+  border-radius: 10px;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: #6FC2F9;
+    background: linear-gradient(180deg, rgba(111, 194, 249, 0.5) 0%, #6FC2F9 100%);
+    opacity: 0.17;
+  }
+
+  &__pic {
+    width: 119px;
+
+    img {
+      @extend .fluid_img;
+    }
+  }
+
+  &__title {
+    font-family: $font_semibold;
+    font-size: 20px;
+
+    &.grey {
+      color: rgba(#000, 0.4);
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: auto;
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      width: 100%;
+      color: #727274;
+      font-size: 18px;
+
+      &::after {
+        content: "\e907";
+        font-family: 'icomoon' !important;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        color: $orange;
+        font-size: 20px;
+        -webkit-transition: all 0.3s ease 0s;
+        -o-transition: all 0.3s ease 0s;
+        transition: all 0.3s ease 0s;
+        position: relative;
+        right: 0;
+      }
+
+      &:hover {
+        color: $orange;
+
+        &::after {
+          right: -5px;
+        }
+      }
+    }
+  }
+
+  &__blank-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 19px;
+    width: 100%;
+
+    .blank-line {
+      max-width: 288px;
+      width: 100%;
+      height: 5px;
+      background-color: #C3E7FD;
+      border-radius: 5px;
+
+      &.short {
+        max-width: 225px;
+      }
+    }
+  }
+
+  &__more {
+    position: absolute;
+    inset: 0;
+    border: 3px solid transparent;
+    border-radius: 10px;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+
+    &:hover {
+      border-color: $orange;
+    }
+  }
+}

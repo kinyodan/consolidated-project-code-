@@ -1,0 +1,320 @@
+//@font-face {
+//  font-family: 'segeo_semibold';
+//  src: url('../fonts/SegoeUI-Semibold.eot');
+//  src: url('../fonts/SegoeUI-Semibold.eot?#iefix') format('embedded-opentype'),
+//  url('../fonts/SegoeUI-Semibold.woff2') format('woff2'),
+//  url('../fonts/SegoeUI-Semibold.woff') format('woff'),
+//  url('../fonts/SegoeUI-Semibold.ttf') format('truetype'),
+//  url('../fonts/SegoeUI-Semibold.svg#SegoeUI-Semibold') format('svg');
+//  font-weight: 600;
+//  font-style: normal;
+//}
+
+//@font-face {
+//  font-family: 'segoe_regular';
+//  src: url('../fonts/SegoeUI.eot');
+//  src: url('../fonts/SegoeUI.eot?#iefix') format('embedded-opentype'),
+//  url('../fonts/SegoeUI.woff2') format('woff2'),
+//  url('../fonts/SegoeUI.woff') format('woff'),
+//  url('../fonts/SegoeUI.ttf') format('truetype'),
+//  url('../fonts/SegoeUI.svg#SegoeUI') format('svg');
+//  font-weight: normal;
+//  font-style: normal;
+//}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('https://ddasf3j8zb8ok.cloudfront.net/craydel.com/fonts/Poppins-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins_Semibold';
+  src: url('https://ddasf3j8zb8ok.cloudfront.net/craydel.com/fonts/Poppins-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins_Bold';
+  src: url('https://ddasf3j8zb8ok.cloudfront.net/craydel.com/fonts/Poppins-Bold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'segoe_light';
+  src: url('../fonts/SegoeUI-Light.eot');
+  src: url('../fonts/SegoeUI-Light.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/SegoeUI-Light.woff2') format('woff2'),
+  url('../fonts/SegoeUI-Light.woff') format('woff'),
+  url('../fonts/SegoeUI-Light.ttf') format('truetype'),
+  url('../fonts/SegoeUI-Light.svg#SegoeUI-Light') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+// fonts
+$font_regular: 'Poppins', Helvetica, sans-serif;
+$font_semibold: 'Poppins_Semibold', Helvetica, sans-serif;
+$font_bold: 'Poppins_Bold', Helvetica, sans-serif;
+$font_light: 'segoe_light', Helvetica, sans-serif;
+
+
+// Colours
+$white: #fff;
+$black: #000;
+$blue: #18244F;
+$light_blue: #2080DA;
+$orange: #F6A70B;
+$green: #3DE24E;
+$red: #FE5050;
+$dark_blue: #0C1536;
+$yellow: #FDF8DE;
+$gutter: 60px;
+$text_color: #21264D;
+
+
+// Mixins
+@mixin box-sizing {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin animaxn {
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  -ms-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.vertical_align {
+  display: table-cell;
+  vertical-align: middle;
+  position: relative;
+}
+
+.inline_block {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  vertical-align: top;
+}
+
+.display_table {
+  height: 100%;
+  display: table;
+  width: 100%;
+}
+
+.fluid_img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  border: none;
+  display: block;
+}
+
+.slider-arrow {
+  width: 39px;
+  height: 39px;
+  opacity: 1;
+  background-color: #fff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+
+  svg {
+    fill: $blue;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+
+  &:hover {
+    background-color: $blue;
+
+    svg {
+      fill: #fff;
+    }
+  }
+}
+
+.full-container {
+  margin-left: -2rem;
+  margin-right: -2rem;
+  padding: 2.5rem 2rem;
+}
+
+.dark-bg {
+  background-color: #F7F9FD;
+}
+
+@keyframes spinner-border {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    filter: alpha(opacity=0)
+  }
+
+  to {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: none;
+    transform: none
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    filter: alpha(opacity=0)
+  }
+
+  to {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: none;
+    transform: none
+  }
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transform: translate3d(0, 10%, 0);
+    transform: translate3d(0, 10%, 0)
+  }
+
+  to {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: none;
+    transform: none
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transform: translate3d(0, 10%, 0);
+    transform: translate3d(0, 10%, 0)
+  }
+
+  to {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: none;
+    transform: none
+  }
+}
+
+@keyframes fadeOutDown {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+@keyframes bounceIn {
+  from,
+  20%,
+  40%,
+  60%,
+  80%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  20% {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  40% {
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+
+  80% {
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both
+}
+
+.fadeOutDown {
+  -webkit-animation-name: fadeOutDown;
+  animation-name: fadeOutDown;
+  -webkit-animation-duration: .6s;
+  animation-duration: .6s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+  -webkit-animation-duration: .6s;
+  animation-duration: .6s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both
+}
+
+.bounceIn {
+  animation-name: bounceIn;
+  -webkit-animation-duration: .6s;
+  animation-duration: .6s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both
+}

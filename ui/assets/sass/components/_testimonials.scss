@@ -1,0 +1,200 @@
+.testimonials-section {
+  margin-bottom: 50px;
+
+  .summary {
+    font-size: 21px;
+    margin-bottom: 1.75em;
+    color: rgba(#000, 0.8);
+  }
+}
+
+.testimonials {
+  padding: 0 90px;
+
+  .testimonial {
+    background-color: #fff;
+    border: 1px solid #979797;
+    border-radius: 10px;
+    padding: 24px 18px 20px 18px;
+
+    &__header {
+      display: flex;
+      gap: 13px;
+
+      .initials {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 58px;
+        height: 58px;
+        background-color: $blue;
+        border-radius: 50%;
+        color: #fff;
+        font-family: $font_semibold;
+        font-size: 24px;
+      }
+
+      .info {
+        flex: 1;
+        padding-top: 4px;
+      }
+
+    }
+
+    &__author {
+      font-family: $font_semibold;
+      font-size: 16px;
+      color: $blue;
+    }
+
+    &__designation {
+      display: block;
+      color: #595959;
+      font-size: 12px;
+      margin-bottom: 0.5em;
+    }
+
+    &__text {
+      font-size: 1rem;
+      color: #000;
+    }
+  }
+
+  .splide__arrow {
+    @extend .slider-arrow;
+  }
+}
+
+.student_rating {
+  margin-bottom: 1rem;
+  width: 100%;
+  height: 30px;
+
+  &.rating-0 {
+    background: url("../images/rating.svg") 0 0 no-repeat;
+  }
+
+  &.rating-0-5 {
+    background: url("../images/rating.svg") 0 -31px no-repeat;
+  }
+
+  &.rating-1 {
+    background: url("../images/rating.svg") 0 -65px no-repeat;
+  }
+
+  &.rating-1-5 {
+    background: url("../images/rating.svg") 0 -98px no-repeat;
+  }
+
+  &.rating-2 {
+    background: url("../images/rating.svg") 0 -132px no-repeat;
+  }
+
+  &.rating-2-5 {
+    background: url("../images/rating.svg") 0 -165px no-repeat;
+  }
+
+  &.rating-3 {
+    background: url("../images/rating.svg") 0 -198px no-repeat;
+  }
+
+  &.rating-3-5 {
+    background: url("../images/rating.svg") 0 -232px no-repeat;
+  }
+
+  &.rating-4 {
+    background: url("../images/rating.svg") 0 -264px no-repeat;
+  }
+
+  &.rating-4-5 {
+    background: url("../images/rating.svg") 0 -298px no-repeat;
+  }
+
+  &.rating-5 {
+    background: url("../images/rating.svg") 0 -329px no-repeat;
+  }
+}
+
+/*---------- MEDIA QUERIES ----------*/
+@media only screen and (max-width: 1670px) {
+  .testimonials-section {
+    margin-bottom: 40px;
+
+    .summary {
+      font-size: 18px;
+    }
+  }
+
+  .testimonials {
+    padding: 0 70px;
+
+    .testimonial__header {
+      .initials {
+        font-size: 20px;
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    .testimonial__designation {
+      margin-bottom: 0.2em;
+    }
+
+    .testimonial__text {
+      font-size: 0.9rem;
+    }
+  }
+
+  .student_rating {
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .testimonials-section .summary {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 870px) {
+  .testimonials-section {
+    margin-bottom: 30px;
+
+    .summary {
+      margin-bottom: 1em;
+    }
+  }
+}
+
+@media only screen and (max-width: 670px) {
+  .testimonials-section .summary {
+    font-size: 14px;
+  }
+
+  .testimonials .testimonial__text {
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 570px) {
+  .testimonials {
+    padding: 0;
+    display: grid;
+
+    .splide__arrows {
+      grid-row: 2;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+
+      .splide__arrow {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        transform: none;
+      }
+    }
+  }
+}

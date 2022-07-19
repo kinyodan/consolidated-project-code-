@@ -1,0 +1,9 @@
+*
+!app/
+!framework/
+!logs/
+!.gitignore
+!test-token.txt
+!test-oauth-public.key
+!test-courses-import.xlsx
+!oauth-public.key

@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  php:
+    image: deminy/counit:php-only
+    tty: true
+    links:
+      - mysql
+      - redis
+      - web
+    volumes:
+      - ./:/var/www
+  swoole:
+    image: deminy/counit:swoole-enabled
+    tty: true
+    links:
+      - mysql
+      - redis
+      - web
+    volumes:
+      - ./:/var/www
+  mysql:
+    image: mysql
+    environment:
+      MYSQL_DATABASE: test
+      MYSQL_USER: username
+      MYSQL_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: password
+  redis:
+    image: redis
+  web:
+    image: phpswoole/swoole
+    volumes:
+      - ./tests/server.php:/var/www/server.php

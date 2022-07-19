@@ -1,0 +1,31 @@
+.cart-total {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+
+  &__label, &__value {
+    opacity: 0.7;
+  }
+
+  &__value {
+    place-self: end;
+  }
+
+  &--bold {
+    opacity: 1;
+    font-family: $font_bold;
+  }
+}
+
+.step-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 36px;
+
+  .back-btn {
+    position: absolute;
+    left: 16px;
+  }
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/admin/craydel-administration-services" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/course-manager-api" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/institution-manager-api" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/search-manager-api" vcs="Git" />
+  </component>
+</project>

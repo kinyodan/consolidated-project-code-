@@ -1,0 +1,355 @@
+<script>
+/**
+ * Basic table component
+ */
+import TheEmployersService from "@/helpers/services/TheEmployersService";
+
+export default {
+    head() {
+        return {
+            title: `${this.title} | Craydel Admin Dashboard`
+        };
+    },
+    data() {
+        return {
+            title: "Employers ",
+            employersdata_list: [],
+            confirm_check: false,
+            countries: [],
+            loadingData: false,
+            loadingData_del: false,
+            filterData: {
+                country_code: null
+            },
+            items: [{
+                    text: "Tables"
+                },
+                {
+                    text: "Employers",
+                    active: true
+                }
+            ],
+            successMsg: false,
+            successMsgText: "",
+            totalRows: 1,
+            currentPage: 1,
+            perPage: 10,
+            pageOptions: [10, 25, 50, 100],
+            filter: null,
+            filterOn: [],
+            sortBy: "id",
+            sortDesc: false,
+              fields: [{
+                key: "check",
+                label: "",
+              },
+              {
+                key: "image",
+                label:'',
+                sortable: true
+               }, 
+                {
+                  key: "Name",
+                  label: 'Name',
+                  sortable: true
+                },
+                  {
+                  key: "status",
+                  label: 'status',
+                  sortable: true
+                },
+                "",
+                "action",
+              ],
+
+        };
+    },
+    middleware: "authentication",
+    computed: {
+      /**
+       * Total no. of records
+       */
+      rows() {
+        return this.totalRows;
+      }
+    },
+    created() {
+        this.getEmployers_list()
+    },
+    methods: {
+        async getEmployers_list() {
+            
+            this.loadingData= true;
+            let self = this; 
+            let getemployerlist = TheEmployersService.getemployerlist().then(response => {
+
+                let employers_data = response.data;
+                if (employers_data.status) {
+                    //redirect to the listing page
+
+                    self.employersdata_list = response.data.data.items;
+                    self.totalRows = response.data.data.items_count;
+                    var perpage_convert =parseInt(response.data.data.items_per_page);
+                    self.perPage = perpage_convert;
+                    self.currentPage = response.data.data.current_page
+                    self.loadingData = false
+                    self.loadingData = false
+
+                    //start loading
+                    this.loadingdata = false;
+
+                } else {
+
+                    this.employerFormSubmittedError = true
+                    this.error_alert = true
+                    this.employerFormSubmittedErrorText = response.data.message
+                    this.loadingData = false;
+                }
+
+            });
+
+        },
+        getEmployer_Data(page) {
+
+            let filterData_employer_data = new FormData();
+            for (let key in this.filterData) {
+              filterData_employer_data.append(key, this.filterData[key] != null ? this.filterData[key] : "");
+            }
+
+            this.loadingData = true;
+            let self = this;
+
+            TheEmployersService.getemployerpage(page).then(response => {
+
+              let responsedata_employer = response.data
+              if (responsedata_employer.status) {
+                self.employersdata_list = responsedata_employer.data.items;
+                self.totalRows = responsedata_employer.data.items_count;
+                var perpage_convert =parseInt(responsedata_employer.data.items_per_page);
+                self.perPage = perpage_convert;
+                self.currentPage = responsedata_employer.data.current_page;
+                self.loadingData = false;
+                self.loadingData = false;
+              }
+
+            })
+        },
+        emp_handlePageChange(value) {
+          this.getEmployer_Data(value)
+        },
+        deleteThisEmployer(id){
+           
+            this.loadingData_del = true;
+            let employerpost_request_d = TheEmployersService.delete(id).then(response => {
+
+              this.getEmployer_Data(this.currentPage)
+
+            });
+
+        },
+        onFiltered(filteredItems) {
+          // Trigger pagination to update the number of buttons/pages due to filtering
+          this.totalRows = filteredItems.length;
+          this.currentPage = 1;
+
+        },
+        handleFilters() {
+          //set the filtered country state
+          this.setFilterCountry({countryCode:this.filterData.country_code})
+
+          //get the data
+          this.getEmployer_Data()
+        },
+        handleClearFilters() {
+          this.filterData.country_code = null
+          this.getEmployer_Data()
+        },
+        pop_confirm(id){
+          this.confirm_check = id;
+        },
+        delete_cancel(){
+          this.confirm_check = false;
+        }
+
+
+    },    
+
+};
+</script>
+<template>
+<div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+
+                <div class="card-body">
+
+                      <router-link class="btn btn-primary move-right waves-effect waves-light mb-3"
+                                   to="/pathways/employers/employer"><i
+                        class="mdi mdi-plus-box-multiple-outline mr-1"></i> Add new {{items[1].text}}
+                      </router-link>
+                      
+                      <h4 class="card-title">{{items[1].text}}</h4>
+                      <p class="card-title-desc">
+                      </p>
+
+
+                    <div class="row mt-4">
+                      <div class="card w-100">
+                        <div class="card-body">
+                          <h4 class="card-title">Filters</h4>
+                          <div>
+                            <b-form inline>
+                              <b-form-select class="mr-3" v-model="filterData.country_code" value="filterData.country_code">
+                                <b-form-select-option :value="null">Select a country</b-form-select-option>
+                                <b-form-select-option v-for="country in countries" :key="country.name" :selected="selectedCountry && selectedCountry === country.iso_code" :value="country.iso_code">
+                                  {{ country.name }}
+                                </b-form-select-option>
+                              </b-form-select>
+                              <b-button variant="primary" class="mr-3" @click="handleFilters" :disabled="loadingData">Filter
+                              </b-button>
+                              <b-button variant="secondary" class="mr-3" @click="handleClearFilters" :disabled="loadingData">Clear
+                              </b-button>
+                              <b-spinner class="m-2" variant="success" role="status" v-if="loadingData"></b-spinner>
+                            </b-form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+        
+                    <div class="row mt-4">
+                      <div class="col-sm-12 col-md-6"> </div>
+                      <!-- Search -->
+                      <div class="col-sm-12 col-md-6">
+                        <div id="tickets-table_filter" class="dataTables_filter text-md-right">
+                          <label class="d-inline-flex align-items-center">
+                            Search:
+                            <b-form-input v-model="filter" type="search" placeholder="Search..."
+                                          class="form-control form-control-sm ml-2"></b-form-input>
+                          </label>
+                        </div>
+                      </div>
+                      <!-- End search -->
+                    </div>
+                    <!-- Table -->
+
+                    <div class="table-responsive mb-0">
+ 
+
+
+                      <b-table
+                        table-class="table table-centered datatable table-card-list"
+                        thead-tr-class="bg-transparent"
+                        :items="employersdata_list"
+                        :fields="fields"
+                        responsive="sm"
+                        :sort-by.sync="sortBy"
+                        :sort-desc.sync="sortDesc"
+                        :filter="filter"
+                        :filter-included-fields="filterOn" @filtered="onFiltered">
+
+                        <template v-slot:cell(code)="data">
+                          <a href="#" class="text-body font-weight-bold">{{ data.item.id }}</a>
+                        </template>
+
+                        <template v-slot:cell(status)="data">
+
+                              <nuxt-link
+                                :to="{path:'/pathways/employers/employer/', query:{id:data.item.id} }"
+                                class="px-2 etd-active text-body" v-b-tooltip.hover title="Click to de-activate" v-if="data.item.is_active===1" >
+                                <span class="active-st-1"><i class="uil uil-check font-size-18"></i> active</span>            
+                              </nuxt-link>
+
+                              <nuxt-link
+                                :to="{path:'javascript:void(0)'}"
+                                class="px-2 etd-inactive text-body" v-b-tooltip.hover title="Click to activate" v-else>  
+                                <span class="active-st-0"> <i class="uil uil-check font-size-18"></i>in-active </span>                            
+                              </nuxt-link>
+
+                        </template>
+
+
+                        <template v-slot:cell(image)="data">
+
+                              <img v-if="data.item.logo" :src="data.item.logo" alt class="avatar-xs rounded-circle mr-2"/>
+
+                              <img v-else :src="data.item.temp_logo_image" alt class="avatar-xs rounded-circle mr-2"/>
+
+       
+
+                        </template>
+
+                        <template v-slot:cell(name)="data">
+
+                            <div class="name-cont-1">
+
+                              <nuxt-link
+                                :to="{path:'/pathways/employers/employer/', query:{id:data.item.id} }"
+                                class="px-2 etd-name text-body" v-b-tooltip.hover title="Open to show">
+                                {{data.item.name}}
+                              </nuxt-link>
+                            </div>
+
+                        </template>
+
+                        <template v-slot:cell(action)="data">
+
+                          <ul class="list-inline mb-0"  id='del-section-anchor'>
+
+                            <li class="list-inline-item">
+                              <nuxt-link
+                                :to="{path:'/pathways/employers/employer', query:{id:data.item.id} }" class="px-2 etd-edit text-primary" v-b-tooltip.hover title="Edit">
+                                <i class="uil uil-pen font-size-18"></i>
+                              </nuxt-link>
+                            </li>
+
+                            <li class="list-inline-item  etd-delete actions-edt-del-1" >
+                              <a href="javascript:void(0);" :data-id="`${data.item.name}`" class="px-2" @click="pop_confirm(data.item.id)"
+                                 :class="{'text-success':data.item.name}" v-b-tooltip.hover title="Delete">
+                                <i class="uil uil-trash-alt font-size-18"></i>
+                              </a></br>
+                            </li>
+
+                          </ul>
+
+                              <span class="`confirm-bx-${data.item.id}` actions-edt-del-in0"  v-if="confirm_check==data.item.id">
+
+                                <span class="px-2 etd-cancel text-primary" v-b-tooltip.hover title="Cancel delete"  @click="delete_cancel()" >
+                                  <span class="active-st-1"><i class="uil uil-check font-size-18"></i> Cancel </span>            
+                                </span></br></br>
+
+                                <span class="px-2 etd-confirm text-primary" :data-delete="`${data.item.name}`" v-b-tooltip.hover title="Confirm delete" @click="deleteThisEmployer(data.item.id)">  
+                                  <span class="active-st-0"> <i class="uil uil-trash-alt font-size-17"></i>
+                                    confirm 
+                                    <b-spinner label="Loading..." style="width: 0.7rem; height: 0.7rem;" v-if="loadingData_del"></b-spinner>
+                                  </span>                            
+                                </span>
+
+                              </span>
+                        </template>
+
+                      </b-table>
+
+
+                    </div>
+                    </br></br>
+                    <div class="row">
+                      <div class="col">
+                        <div class="dataTables_paginate paging_simple_numbers float-right">
+                          <ul class="pagination pagination-rounded">
+                            <!-- pagination -->
+                            <b-pagination @input="emp_handlePageChange" v-model="currentPage" :total-rows="rows"
+                                          :per-page="perPage"></b-pagination>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+          
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</template>
+

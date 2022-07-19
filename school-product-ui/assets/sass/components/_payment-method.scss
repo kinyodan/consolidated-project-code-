@@ -1,0 +1,53 @@
+.payment-method {
+  .v-window {
+    overflow: inherit;
+  }
+}
+
+.payment-tab {
+  background-color: #FFFBE6 !important;
+
+  .vue-phone-number-input {
+    background-color: #fff;
+  }
+
+  .form_label {
+    opacity: 1;
+  }
+
+  .v-btn--loading .v-btn__content {
+    display: none;
+  }
+
+  .v-btn__loader {
+    position: relative;
+  }
+
+  &--text {
+    color: #fff !important;
+
+    .v-tab {
+      &, &::before {
+        border-radius: 4px;
+      }
+
+      &:hover::before {
+        opacity: 0.2 !important;
+      }
+
+      &--active {
+        background-color: $blue;
+      }
+    }
+
+    .v-slide-group__content {
+      gap: 10px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 24px;
+    }
+  }
+}

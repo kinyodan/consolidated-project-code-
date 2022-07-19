@@ -1,0 +1,43 @@
+{
+  "name": "career-counselling",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "test:e2e": "nightwatch"
+  },
+  "dependencies": {
+    "@nuxtjs/dotenv": "^1.4.1",
+    "@splidejs/splide": "^2.4.21",
+    "@splidejs/vue-splide": "^0.3.5",
+    "@vuelidate/core": "^2.0.0-alpha.35",
+    "@vuelidate/validators": "^2.0.0-alpha.27",
+    "apexcharts": "^3.26.2",
+    "axios": "^0.21.1",
+    "bootstrap-vue": "^2.21.2",
+    "chart.js": "^2.9.4",
+    "chartjs-plugin-datalabels": "^1.0.0",
+    "cookie-universal-nuxt": "^2.1.4",
+    "core-js": "^3.9.1",
+    "jwt-decode": "^3.1.2",
+    "nuxt": "^2.15.3",
+    "vue-apexcharts": "^1.6.1",
+    "vue-html2pdf": "^1.8.0",
+    "vue-lazy-hydration": "^2.0.0-beta.4",
+    "vue-scrollto": "^2.20.0",
+    "vuelidate": "^0.7.6"
+  },
+  "devDependencies": {
+    "chromedriver": "^89.0.0",
+    "nightwatch": "^1.5.1",
+    "sass": "^1.49.8"
+  },
+  "config": {
+    "nuxt": {
+      "host": "0.0.0.0"
+    }
+  }
+}

@@ -1,0 +1,54 @@
+stages:
+  - build
+  - deploy_test
+
+# build stage
+build app:
+  image: node:15.7.0
+  stage: build
+  only:
+    - development
+  script:
+    - export NODE_OPTIONS=--max_old_space_size=4096
+    # Install vue cli
+    # npm install -g @vue/cli@latest
+    # Install dependencies
+    - yarn install
+    #install npm dependencies
+    #  - npm install
+    # Build App
+    - yarn generate
+  cache:
+    paths:
+      - node_modules/
+  artifacts:
+    paths:
+      # build folder
+      - dist/
+      - deploy_scripts/
+    expire_in: 1 hour
+  when: on_success
+
+# deploy on testing stage
+deploy staging:
+  image: node:15.7.0
+  stage: deploy_test
+  before_script:
+    - mkdir -p ~/.ssh
+    - echo -e "$SSH_PRIVATE_KEY_TEST_SERVER_ONE" > ~/.ssh/id_rsa
+    - chmod 600 ~/.ssh/id_rsa
+    - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+  script:
+    #Check if the site directory alread
+    - ssh -q deployer@165.22.218.168 [[ ! -d /var/www/admin-ui ]] && ssh deployer@165.22.218.168 mkdir /var/www/admin-ui
+    #Check if the site is already enabled
+    - ssh -q deployer@165.22.218.168 [[ ! -f /etc/apache2/sites-available/admin.craydel.online.conf ]] && scp deploy_scripts/admin.craydel.online.conf deployer@165.22.218.168:/var/www/admin-ui/admin.craydel.online.conf && ssh deployer@165.22.218.168 sudo mv /var/www/admin-ui/admin.craydel.online.conf /etc/apache2/sites-available/admin.craydel.online.conf && ssh deployer@165.22.218.168 sudo a2ensite admin.craydel.online.conf && ssh deployer@165.22.218.168 sudo  systemctl reload apache2
+    #copy the files to activate the site
+    - scp -r dist/* deployer@165.22.218.168:/var/www/admin-ui/
+  when: on_success
+
+
+
+
+
+

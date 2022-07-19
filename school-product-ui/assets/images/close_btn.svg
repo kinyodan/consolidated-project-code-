@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="8px" height="8px" viewBox="0 0 8 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56.2 (81672) - https://sketch.com -->
+    <title>Path</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Negotiation_clicked" transform="translate(-347.000000, -42.000000)" fill="#FFFFFF">
+            <g id="Group-20" transform="translate(339.000000, 34.000000)">
+                <g id="Group-12" transform="translate(2.000000, 2.000000)">
+                    <g id="Component/Icon/Plus" transform="translate(10.000000, 10.202031) rotate(45.000000) translate(-10.000000, -10.202031) translate(3.000000, 3.202031)">
+                        <path d="M7.5,5.92857143 L10.6428571,5.92857143 C11.0767952,5.92857143 11.4285714,6.2803477 11.4285714,6.71428571 C11.4285714,7.14822373 11.0767952,7.5 10.6428571,7.5 L7.5,7.5 L7.5,10.6428571 C7.5,11.0767952 7.14822373,11.4285714 6.71428571,11.4285714 C6.2803477,11.4285714 5.92857143,11.0767952 5.92857143,10.6428571 L5.92857143,7.5 L2.78571429,7.5 C2.35177627,7.5 2,7.14822373 2,6.71428571 C2,6.2803477 2.35177627,5.92857143 2.78571429,5.92857143 L5.92857143,5.92857143 L5.92857143,2.78571429 C5.92857143,2.35177627 6.2803477,2 6.71428571,2 C7.14822373,2 7.5,2.35177627 7.5,2.78571429 L7.5,5.92857143 Z" id="Path"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

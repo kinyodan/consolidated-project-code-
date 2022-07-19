@@ -1,0 +1,143 @@
+.subject-help {
+  display: grid;
+  position: fixed;
+  place-content: center;
+  inset: 0;
+  padding: 20px;
+  background-color: rgba(#000, 0.8);
+  overflow: auto;
+  visibility: hidden;
+  transition: visibility 0ms linear 0.3s;
+
+  &--show {
+    visibility: visible;
+    transition: visibility 0ms;
+
+    .subject-help__popup {
+      -webkit-animation-name: fadeInUp;
+      animation-name: fadeInUp;
+      -webkit-animation-duration: .6s;
+      animation-duration: .6s;
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+    }
+  }
+
+  &__popup {
+    padding: 46px 34px 10px 34px;
+    max-width: 1146px;
+    width: 100%;
+    overflow: auto;
+    position: relative;
+    background-color: #fff;
+    color: rgba(#000, 0.8);
+    border-radius: 10px;
+    box-shadow: 0px 5px 16px rgba(0, 0, 0, 0.133714);
+
+    -webkit-animation-name: fadeOutDown;
+    animation-name: fadeOutDown;
+    -webkit-animation-duration: .6s;
+    animation-duration: .6s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+  }
+
+  &__glossary {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+
+    .note {
+      font-size: 13px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 20;
+    font-size: 24px;
+    color: rgba(#000, 0.8);
+
+    &:hover {
+      color: $light-blue;
+    }
+  }
+
+  &__title {
+    font-size: 20px;
+    border-bottom: 1px solid #000;
+    display: inline-block;
+    margin-bottom: 0.5em;
+  }
+
+  &__sub-title {
+    font-size: 17px;
+    margin-bottom: 0.5em;
+  }
+
+  .course-subjects__listing {
+    gap: 5px 32px;
+
+    &.two-col {
+      display: block;
+      columns: 2;
+
+      li {
+        break-inside: avoid;
+        margin-bottom: 0.3em;
+      }
+    }
+  }
+}
+
+/*---------- MEDIA QUERIES ----------*/
+@media only screen and (max-width: 870px) {
+  .subject-help__popup {
+    padding: 46px 20px 10px 20px;
+  }
+
+  .subject-help__glossary {
+    gap: 50px;
+  }
+
+  .subject-help__title {
+    font-size: 18px;
+  }
+
+  .subject-help__sub-title {
+    font-size: 16px;
+  }
+
+  .subject-help .course-subjects__listing {
+    &.two-col {
+      columns: 1;
+    }
+  }
+}
+
+@media only screen and (max-width: 570px) {
+  .subject-help__glossary {
+    grid-template-columns: 1fr;
+    gap: 0;
+
+    .note {
+      font-size: 12px;
+    }
+  }
+
+  .subject-help__title {
+    font-size: 16px;
+  }
+
+  .subject-help__sub-title {
+    font-size: 14px;
+  }
+}

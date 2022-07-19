@@ -1,0 +1,133 @@
+.error-page {
+  height: 100vh;
+  padding: 3rem 0;
+  position: relative;
+
+  &::after {
+    content: "";
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: url("https://ddasf3j8zb8ok.cloudfront.net/craydel.com/images/craydel-default-error-page-bg.svg") no-repeat center center;
+    background-size: contain;
+  }
+
+  .wrap {
+    position: relative;
+    height: 100%;
+    display: flex;
+    z-index: 1;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  &__header {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    .logo {
+      display: flex;
+      align-items: center;
+
+      img {
+        height: 29px;
+      }
+    }
+  }
+
+  &__content {
+    max-width: 800px;
+    text-align: center;
+
+    h1 {
+      font-family: $font_bold;
+      font-weight: normal;
+      font-size: 36px;
+      margin-bottom: 1rem;
+    }
+
+    h4 {
+      font-family: $font_regular;
+      font-weight: normal;
+      font-size: 18px;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 18px;
+
+      a {
+        color: $red;
+        font-family: $font_bold;
+
+        &:hover {
+          text-decoration: underline;
+          color: $blue;
+        }
+      }
+    }
+  }
+}
+
+/*---------- MEDIA QUERIES ----------*/
+@media only screen and (max-width: 1670px) {
+  .error-page__header {
+    left: 3rem;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .error-page__content h1 {
+    font-size: 32px;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .error-page__header {
+    left: 2rem;
+  }
+}
+
+@media only screen and (max-width: 870px) {
+  .error-page {
+    .wrap {
+      max-width: none;
+    }
+  }
+
+  .error-page__header {
+    left: 1.5rem;
+  }
+
+  .error-page__content {
+    h1 {
+      font-size: 2em;
+    }
+
+    h4, p {
+      font-size: 1em;
+    }
+  }
+}
+
+@media only screen and (max-width: 570px) {
+  .error-page {
+    padding: 2rem 0;
+    overflow: hidden;
+
+    .wrap {
+      margin-top: 0;
+    }
+
+    &::after {
+      background-size: 200%;
+    }
+  }
+
+  .error-page__content h1 {
+    font-size: 1.4em;
+  }
+}

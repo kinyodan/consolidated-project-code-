@@ -1,0 +1,54 @@
+// 
+// _card.scss
+// 
+
+.card {
+  margin-bottom: $grid-gutter-width;
+  box-shadow: $box-shadow;
+}
+
+.card-drop {
+  color: $body-color;
+}
+
+.card-title {
+  font-size: 16px;
+  margin: 0 0 7px 0;
+  font-weight: $font-weight-semibold;
+}
+
+.card-title-desc {
+  color: $card-title-desc;
+  margin-bottom: 24px;  
+}
+
+
+p.note{
+     -moz-border-radius: 6px;
+     -webkit-border-radius: 6px;
+     background-color: #f0f7fb;
+     background-position: 9px 0px;
+     background-repeat: no-repeat;
+     border: solid 1px #3498db;
+     border-radius: 6px;
+     line-height: 18px;
+     overflow: hidden;
+     margin-top:1rem;
+     padding: 0.3rem 0.30rem;
+}
+
+
+p.note-danger{
+     -moz-border-radius: 6px;
+     -webkit-border-radius: 6px;
+     background-color: #FCE0DD;
+     background-position: 9px 0px;
+     background-repeat: no-repeat;
+     border: solid 1px #D33221;
+     border-radius: 6px;
+     line-height: 18px;
+     overflow: hidden;
+     margin-top:1rem;
+     padding: 0.3rem 0.30rem;
+}
+

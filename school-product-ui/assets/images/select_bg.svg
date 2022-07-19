@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="13px" viewBox="0 0 28 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>select_bg</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 0 8.46153846 0 8.46153846 4.61538462 0 4.61538462"></polygon>
+        <polygon id="path-3" points="0 0 8.46153846 0 8.46153846 4.61538462 0 4.61538462"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="select_bg">
+            <g id="Rectangle" fill="#FFFFFF" fill-rule="nonzero">
+                <rect x="0" y="0" width="28" height="13"></rect>
+            </g>
+            <g id="Group-2-Copy-2" transform="translate(1.000000, 0.000000)">
+                <g id="Group-3" transform="translate(1.000000, 7.384615)">
+                    <g id="Fill-1-Clipped">
+                        <g>
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <g id="path-1"></g>
+                            <path d="M7.79243327,0 C8.50476934,0 8.67605379,0.440153639 8.17191412,0.978580574 L5.14642857,4.21156441 C4.64261269,4.74999135 3.81889316,4.74999135 3.3147535,4.21156441 L0.289591732,0.978580574 C-0.214224142,0.440153639 -0.0435872749,0 0.668748794,0 L7.79243327,0 Z" id="Fill-1" fill="#18244F" fill-rule="nonzero" mask="url(#mask-2)"></path>
+                        </g>
+                    </g>
+                </g>
+                <g id="Group-3-Copy" transform="translate(4.961538, 2.865384) rotate(180.000000) translate(-4.961538, -2.865384) translate(0.461538, 0.365384)">
+                    <g id="Fill-1-Clipped">
+                        <g>
+                            <mask id="mask-4" fill="white">
+                                <use xlink:href="#path-3"></use>
+                            </mask>
+                            <g id="path-3"></g>
+                            <path d="M7.79243327,0 C8.50476934,0 8.67605379,0.440153639 8.17191412,0.978580574 L5.14642857,4.21156441 C4.64261269,4.74999135 3.81889316,4.74999135 3.3147535,4.21156441 L0.289591732,0.978580574 C-0.214224142,0.440153639 -0.0435872749,0 0.668748794,0 L7.79243327,0 Z" id="Fill-1" fill="#18244F" fill-rule="nonzero" mask="url(#mask-4)"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

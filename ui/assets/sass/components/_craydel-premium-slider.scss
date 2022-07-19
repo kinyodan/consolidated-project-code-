@@ -1,0 +1,74 @@
+.craydel-premium-slider {
+  max-width: 68.5%;
+  margin: 0 auto;
+
+  .item {
+    padding: 0 90px;
+
+    img {
+      @extend .fluid_img;
+    }
+  }
+
+  .welcome-cma {
+    margin: 0;
+  }
+
+  .splide__arrow {
+    @extend .slider-arrow;
+  }
+}
+
+/*---------- MEDIA QUERIES ----------*/
+@media only screen and (max-width: 1300px) {
+  .craydel-premium-slider {
+    max-width: 75%;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .craydel-premium-slider {
+    max-width: 90%;
+  }
+}
+
+@media only screen and (max-width: 870px) {
+  .craydel-premium-slider {
+    max-width: none;
+
+    .item {
+      padding: 0 70px;
+    }
+  }
+}
+
+@media only screen and (max-width: 570px) {
+  .craydel-premium-slider {
+    margin-bottom: 30px;
+
+    .item {
+      padding: 0;
+    }
+
+    .splide {
+      display: grid;
+    }
+
+    .splide__arrows {
+      grid-row: 2;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+
+      .splide__arrow {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        transform: none;
+      }
+    }
+  }
+
+}

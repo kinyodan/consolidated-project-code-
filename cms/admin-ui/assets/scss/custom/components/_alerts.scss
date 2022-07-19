@@ -1,0 +1,35 @@
+
+//
+// alerts.scss
+//
+
+.alert-border{
+    background-color: $card-bg;
+    border-color: $light;
+    border-top: 2px solid $light;
+  }
+  
+  @each $color,
+  $value in $theme-colors {
+      .alert-border-#{$color} {
+          border-top-color: $value;
+      }
+  }
+
+
+.alert-success{
+    background-color: #9EE3AC;
+    border-color: #286635;
+    border-top: 2px solid #0B4717;
+    padding:0 !important;
+    margin-top:0.5rem;
+    text-align: center;
+    opacity: 0.8;
+  }
+  
+
+.in-alert-text0{
+  background-color: #ffffff !important;
+  color:red;
+
+}

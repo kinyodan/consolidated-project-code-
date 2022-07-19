@@ -1,0 +1,52 @@
+table.tabular-questions {
+  border-collapse: collapse;
+  margin: 1.5rem 0 34px 0;
+  padding: 0;
+  width: 100%;
+  font-size: 18px;
+  //table-layout: fixed;
+
+  th,
+  td {
+    padding: .625em;
+    text-align: center;
+    border-bottom: 1px solid #dcdcdc;
+    font-size: 18px;
+    position: relative;
+    color: rgba(#000, 0.8);
+
+    &.align-left {
+      text-align: left;
+    }
+  }
+
+  th {
+    color: #5B6874;
+
+    &.number-col {
+      width: 40px;
+    }
+  }
+
+  .question {
+    text-align: left;
+
+    .text {
+      max-width: 540px;
+    }
+  }
+
+  .q-number {
+    font-family: $font_semibold;
+    line-height: 1;
+    text-align: left;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .answer_container {
+    margin-left: -10px;
+    padding-left: 0;
+    position: absolute;
+  }
+}

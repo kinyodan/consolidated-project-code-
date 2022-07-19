@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="296px" height="275px" viewBox="0 0 296 275" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Test-Report-pages-5-6" transform="translate(-26.000000, -115.000000)">
+            <g id="Group" transform="translate(26.507300, 115.000000)">
+                <polygon id="Fill-25" fill="#6E848F" points="98.8727 264 70.4517 264 70.4517 30.968 98.8727 30.968"></polygon>
+                <polygon id="Fill-26" fill="#00ACC1" points="109.3917 264 137.8127 264 137.8127 104.132 109.3917 104.132"></polygon>
+                <polygon id="Fill-27" fill="#1ABC9C" points="176.7527 264 148.3317 264 148.3317 137.29 176.7527 137.29"></polygon>
+                <polygon id="Fill-28" fill="#E64A19" points="215.6927 264 187.2717 264 187.2717 78.697 215.6927 78.697"></polygon>
+                <polygon id="Fill-29" fill="#F9A825" points="226.2117 264 254.6327 264 254.6327 124.572 226.2117 124.572"></polygon>
+                <line x1="23.4927" y1="0" x2="23.4927" y2="264" id="Stroke-30" stroke="#999999" stroke-width="0.25"></line>
+                <line x1="23.4927" y1="264" x2="295.4927" y2="264" id="Stroke-31" stroke="#999999" stroke-width="0.25"></line>
+                <text id="Mid" font-family="Seravek-Light, Seravek" font-size="7" font-weight="300" fill="#000000">
+                    <tspan x="2.5132" y="139.149965">Mid</tspan>
+                </text>
+                <text id="Low" font-family="Seravek-Light, Seravek" font-size="7" font-weight="300" letter-spacing="-0.003" fill="#000000">
+                    <tspan x="1.5892" y="228.651965">L</tspan>
+                    <tspan x="4.7712" y="228.651965" letter-spacing="0.004">o</tspan>
+                    <tspan x="8.5272" y="228.651965">w</tspan>
+                </text>
+                <text id="Conventional" font-family="Seravek-Light, Seravek" font-size="7" font-weight="300" fill="#000000">
+                    <tspan x="82.7607" y="272.820965">C</tspan>
+                    <tspan x="86.9607" y="272.820965">o</tspan>
+                    <tspan x="90.7267" y="272.820965">n</tspan>
+                    <tspan x="94.5277" y="272.820965">ve</tspan>
+                    <tspan x="101.0517" y="272.820965">n</tspan>
+                    <tspan x="104.8527" y="272.820965">tional</tspan>
+                </text>
+                <text id="Artistic" font-family="Seravek-Light, Seravek" font-size="7" font-weight="300" fill="#000000">
+                    <tspan x="121.7017" y="272.820965">Arti</tspan>
+                    <tspan x="132.9647" y="272.820965">s</tspan>
+                    <tspan x="135.9327" y="272.820965">tic</tspan>
+                </text>
+                <text id="Realistic" font-family="Seravek-Light, Seravek" font-size="7" font-weight="300" fill="#000000">
+                    <tspan x="160.6427" y="272.820965">Reali</tspan>
+                    <tspan x="174.8597" y="272.820965">s</tspan>
+                    <tspan x="177.8277" y="272.820965">tic</tspan>
+                </text>
+                <text id="Investigative" font-family="Seravek-Light, Seravek" font-size="7" font-weight="300" fill="#000000">
+                    <tspan x="199.5837" y="272.820965">I</tspan>
+                    <tspan x="201.3197" y="272.820965">n</tspan>
+                    <tspan x="205.1207" y="272.820965">ve</tspan>
+                    <tspan x="211.6447" y="272.820965">s</tspan>
+                    <tspan x="214.6127" y="272.820965">tigative</tspan>
+                </text>
+                <text id="Enterprising" font-family="Seravek-Light, Seravek" font-size="7" font-weight="300" fill="#000000">
+                    <tspan x="238.5247" y="272.820965">En</tspan>
+                    <tspan x="245.8257" y="272.820965">terprising</tspan>
+                </text>
+                <text id="High" font-family="Seravek-Light, Seravek" font-size="7" font-weight="300" fill="#000000">
+                    <tspan x="0" y="49.649965">High</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

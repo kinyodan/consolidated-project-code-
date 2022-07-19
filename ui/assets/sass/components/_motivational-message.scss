@@ -1,0 +1,78 @@
+$bubble-blue: #56B6E4;
+$bubble-orange: #FD9E83;
+$bubble-yellow: #F6A70B;
+$bubble-purple: #EE91FE;
+
+.motivational-message {
+  display: grid;
+  position: fixed;
+  inset: 0;
+  z-index: 4;
+  place-content: center;
+  pointer-events: none;
+
+  &__popup {
+    position: relative;
+    filter: drop-shadow(6px 10px 25px rgba(0, 0, 0, 0.25));
+
+    .memoji {
+      width: 70px;
+      height: 78px;
+      padding: 5px;
+      pointer-events: none;
+      position: absolute;
+      z-index: 2;
+      top: -46px;
+      left: 8px;
+      background: url("../images/party-emoji-bg.svg") 0 0 no-repeat;
+      animation-delay: 0.5s;
+
+      img {
+        @extend .fluid_img;
+      }
+    }
+
+    .message-label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      border-radius: 32px;
+      overflow: hidden;
+
+      .party-bubbles {
+        background: url("../images/party-emoji-bubbles.svg") 0 bottom no-repeat;
+        mix-blend-mode: soft-light;
+        width: 116px;
+        height: 70px;
+        background-size: 100%;
+        align-self: flex-end;
+      }
+
+      span {
+        padding: 13px 20px 13px 0;
+        font-size: 21px;
+        color: #fff;
+        max-width: 150px;
+      }
+    }
+  }
+
+  .motivational-message__popup {
+    &.blue .message-label {
+      background-color: $bubble-blue;
+    }
+
+    &.orange .message-label {
+      background-color: $bubble-orange;
+    }
+
+    &.yellow .message-label {
+      background-color: $bubble-yellow;
+    }
+
+    &.purple .message-label {
+      background-color: $bubble-purple;
+    }
+  }
+}

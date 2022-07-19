@@ -1,0 +1,166 @@
+.main-filter {
+  position: relative;
+
+  .mdrp-root {
+    display: block !important;
+  }
+
+  .mdrp__activator .activator-wrapper label,
+  .mdrp__activator .activator-wrapper .bar {
+    display: none;
+  }
+
+  .mdrp__activator .activator-wrapper .text-field {
+    width: 100%;
+    padding: 10px 40px 10px 12px;
+    border: 0 none;
+    height: 42px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  .styled-select {
+    overflow: inherit;
+  }
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+
+  &__title {
+    font-family: $font_bold;
+    color: $blue;
+    font-size: 14px;
+  }
+
+  .filter-field {
+    position: relative;
+    min-width: 200px;
+    max-width: 200px;
+  }
+}
+
+.filter_btn {
+  background: #18244f;
+  height: 34px;
+  padding: 0 24px;
+  border-radius: 33px;
+  color: $white;
+
+  &:hover {
+    background: $orange;
+    color: $text_color;
+  }
+}
+
+.filter-dp {
+  position: relative;
+
+  &::after {
+    content: "\F035D";
+    font: normal normal normal 24px/1 "Material Design Icons";
+    position: absolute;
+    right: 0;
+    top: 4px;
+    pointer-events: none;
+    color: $blue;
+  }
+
+  .mdrp-root {
+    display: block !important;
+  }
+
+  .mdrp__activator {
+    .activator-wrapper {
+      label {
+        display: none;
+      }
+
+      .text-field {
+        width: 100%;
+        padding: 10px 40px 10px 0;
+        margin-right: 2px;
+        height: 34px;
+        cursor: pointer;
+        font-size: 14px;
+        border-color: rgba(0, 0, 0, 0.42);
+
+        &:hover {
+          border-color: rgba(0, 0, 0, 0.87);
+        }
+      }
+
+      .bar {
+        width: auto;
+
+        &::after,
+        &::before {
+          bottom: 0;
+          background-color: #1976d2;
+        }
+      }
+    }
+  }
+}
+
+/*---------- MEDIA QUERIES ----------*/
+@media only screen and (max-width: 670px) {
+  .mdrp__panel.show-calendar {
+    flex-wrap: wrap;
+    height: 70vh;
+    overflow: auto;
+  }
+
+  .ranges {
+    flex: 0 0 100%;
+
+    ul {
+      width: 100% !important;
+    }
+  }
+
+  .mdrp__panel {
+    width: 100% !important;
+
+    .calendar-table {
+      max-width: 260px;
+    }
+
+    &.opens-arrow-pos-right {
+      right: 0 !important;
+    }
+  }
+
+  .filters {
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+
+    .filter-field {
+      max-width: none;
+      width: 100%;
+    }
+
+    .filter-dp {
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: 564px) {
+  .mdrp__panel .calendar-table {
+    max-width: none !important;
+  }
+  table.calendar-table {
+    th {
+      width: 100vw !important;
+    }
+
+    &.left {
+      margin: 20px 0 !important;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.all-career-pathways {
+  margin-top: 60px;
+  color: rgba(#000, 0.8);
+
+  &__title {
+    font-family: $font_semibold;
+    font-size: 22px;
+    margin-bottom: 0.9em;
+  }
+
+  .custom-select {
+    max-width: 758px;
+    margin-bottom: 60px;
+  }
+}

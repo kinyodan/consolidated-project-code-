@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="201px" viewBox="0 0 200 201" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Test-Report-pages-5-6-pages-2" transform="translate(-86.000000, -94.000000)">
+            <g id="Group-31" transform="translate(0.000000, 94.000000)">
+                <g id="Group" transform="translate(86.000000, 0.145000)">
+                    <path d="M94.977,100.173 L75.369,3.065 C32.053,14.038 -1.42108547e-14,53.272 -1.42108547e-14,100 C-1.42108547e-14,149.127 35.437,189.95 82.138,198.377 L94.977,100.173 Z" id="Fill-25" fill="#18244F"></path>
+                    <path d="M103.676,93.156 L190.683,57.85 C174.778,23.691 140.165,0 100,0 C94.932,0 89.955,0.384 85.091,1.112 L103.676,93.156 Z" id="Fill-27" fill="#FBA138"></path>
+                    <path d="M104.542,103.509 L91.972,199.651 C94.623,199.862 97.294,200 100,200 C155.229,200 200,155.228 200,100 C200,88.448 198.018,77.364 194.414,67.041 L104.542,103.509 Z" id="Fill-29" fill="#E64A19"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,55 @@
+.congrats {
+  display: flex;
+  align-items: center;
+  gap: 62px;
+  background-color: $blue;
+  color: #fff;
+  border-radius: 20px;
+  padding: 38px 50px;
+  margin-bottom: 34px;
+
+  &__memoji {
+    flex-basis: 214px;
+    background-color: #FFE1B2;
+    border: 9px solid #FFF7EE;
+    border-radius: 50%;
+    padding: 8px;
+    position: relative;
+
+    img {
+      @extend .fluid_img;
+    }
+  }
+
+  &__content {
+    flex: 1;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    .title {
+      font-family: $font_semibold;
+      font-size: 2.5rem
+    }
+
+    .confetti {
+      width: 50px;
+      height: 50px;
+      margin-left: 24px;
+
+      img {
+        @extend .fluid_img;
+      }
+    }
+  }
+
+  &__summary {
+    font-size: 1.5rem;
+    line-height: 1.4;
+  }
+}
+
+

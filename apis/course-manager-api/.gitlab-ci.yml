@@ -1,0 +1,42 @@
+image: registry.gitlab.com/cradle-app/course-manager/course-manager-api:latest
+services:
+  - mysql:8.0
+
+variables:
+  MYSQL_DATABASE: craydel_course_manager
+  MYSQL_ROOT_PASSWORD: admin
+  DB_HOST: mysql
+  DB_USERNAME: root
+
+stages:
+  - test
+  - deploy_to_test
+
+unit_test:
+  stage: test
+  script:
+    - cp .env.example .env
+    - composer install
+    - composer dump-autoload
+    - php artisan migrate
+    - php artisan db:seed
+    - vendor/phpunit/phpunit/phpunit -d memory_limit=-1
+  only:
+    - development
+
+deploy_test_server:
+  stage: deploy_to_test
+  script:
+    - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+    - eval $(ssh-agent -s)
+    - ssh-add <(echo "$SSH_PRIVATE_KEY_TEST_SERVER_ONE")
+    - mkdir -p ~/.ssh
+    - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+
+    - ~/.composer/vendor/bin/envoy run deploy_on_test --commit="$CI_COMMIT_SHA"
+  environment:
+    name: testing
+    url: https://courses.craydel.online
+  when: on_success
+  only:
+    - development

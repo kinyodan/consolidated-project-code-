@@ -1,0 +1,130 @@
+.v-application {
+  font-family: $font_regular !important;
+}
+
+.v-text-field {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+.v-label {
+  font-size: 14px !important;
+}
+
+.theme--light {
+  &.v-label,
+  &.v-icon {
+    color: $blue !important;
+  }
+
+  &.primary {
+    background: $blue !important;
+    cursor: pointer !important;
+    border-radius: 33px !important;
+    text-transform: capitalize !important;
+  }
+}
+
+.v-stepper__step__step .v-icon.v-icon {
+  font-size: 1rem !important;
+  color: #fff !important;
+}
+
+.v-stepper__step--complete {
+  .v-stepper__step__step {
+    background-color: #4caf50 !important;
+  }
+}
+
+.v-stepper--alt-labels {
+  .v-stepper__step {
+    flex-basis: auto !important;
+
+  }
+
+  .v-stepper__header .v-divider {
+    margin-inline: -46px !important;
+  }
+}
+
+.v-stepper__header {
+  box-shadow: none !important;
+}
+
+.v-stepper__content {
+  padding: 0 !important;
+}
+
+.theme--light.v-stepper .v-stepper__step:not(.v-stepper__step--active):not(.v-stepper__step--complete):not(.v-stepper__step--error) .v-stepper__step__step {
+  background-color: #bdbdbd !important;
+}
+
+.v-application {
+  .v-chip {
+    padding: 0 10px !important;
+
+    &.red {
+      color: #5a5a5a !important;
+      background-color: #ebeaea !important;
+      border-color: #ebeaea !important;
+    }
+
+    &.green {
+      background: #e6f8e9 !important;
+      color: #0b8923 !important;
+    }
+
+    &.failed {
+      background: #ffebeb !important;
+      color: #ff5252 !important;
+    }
+
+    &.v-size--default {
+      border-radius: 16px;
+      font-size: 12px;
+      height: 23px;
+      line-height: 12px;
+    }
+  }
+
+  &--is-ltr {
+    .v-list-item__action:first-child,
+    .v-list-item__icon:first-child {
+      margin-right: 12px !important;
+    }
+  }
+}
+
+.v-application--is-ltr {
+  .v-data-footer__pagination {
+    margin: 0 8px 0 16px !important;
+  }
+
+  .v-data-footer__select {
+    margin-right: 0 !important;
+
+    .v-select {
+      margin-left: 8px !important;
+    }
+  }
+}
+
+.transparent-bg {
+  background-color: transparent !important;
+
+  &.theme--light.v-tabs > .v-tabs-bar,
+  .theme--light.v-tabs-items {
+    background-color: transparent !important;
+  }
+
+  .theme--light.v-tabs-items {
+    overflow: inherit;
+  }
+}
+
+/*---------- MEDIA QUERIES ----------*/
+@media only screen and (max-width: 1000px) {
+  .v-stepper:not(.v-stepper--vertical) .v-stepper__label {
+    display: block !important;
+  }
+}

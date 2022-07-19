@@ -1,0 +1,146 @@
+.school-data-table {
+  .v-data-table__wrapper {
+    > table {
+      > tbody > tr > td,
+      > thead > tr > td,
+      > tfoot > tr > td {
+        font-size: 13px !important;
+        padding-block: 0.5rem !important;
+      }
+    }
+
+    th, td {
+      white-space: nowrap !important;
+    }
+  }
+
+  .v-data-table__mobile-table-row {
+    display: flex !important;
+    align-items: center;
+  }
+
+  .v-data-table__mobile-row {
+    display: none;
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      display: block;
+    }
+
+    &:nth-child(1) {
+      padding-right: 0;
+    }
+
+    &:nth-child(2) {
+      flex: 1;
+      padding-left: 0;
+
+      .v-data-table__mobile-row__header {
+        display: none;
+      }
+
+      .v-data-table__mobile-row__cell {
+        width: 100%;
+        text-align: left;
+      }
+    }
+
+    &__header {
+      white-space: nowrap;
+    }
+  }
+
+  &.no-actions {
+    .v-data-table__mobile-row {
+      flex: 1;
+
+      &:nth-child(2) {
+        display: none;
+      }
+    }
+  }
+
+  .text-d-none {
+    display: none !important;
+  }
+
+  .mobile-actions {
+    display: flex;
+    align-items: center;
+
+    .mdi-pencil {
+      margin-left: auto;
+    }
+  }
+}
+
+.school-grid-mobile {
+  display: grid;
+  grid-template-columns:1fr;
+  gap: 8px;
+  height: auto !important;
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    white-space: normal;
+  }
+}
+
+.school-grid-expand {
+  font-family: $font_bold;
+}
+
+.row_table_action {
+  display: flex;
+  align-items: flex-end;
+  align-content: center;
+  width: 100%;
+  padding: 20px;
+  position: relative;
+  border-bottom: #f2f4f6 solid 1px;
+
+  .row_action_left {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 0;
+    align-items: center;
+  }
+
+  .row_action_right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+  }
+
+  .styled-select {
+    height: 34px;
+    margin-right: 1.2rem;
+
+    select {
+      padding: 5px 40px 5px 16px;
+      height: 34px;
+      min-width: 128px;
+    }
+  }
+}
+
+.modal .row_table_action {
+  padding-inline: 0;
+}
+
+.theme--light.v-data-table > .v-data-table__wrapper > table > thead > tr:last-child > th {
+  text-align: left;
+  font-family: $font_bold;
+  font-weight: normal;
+  color: $blue;
+  font-size: 14px;
+}
+
+.v-data-table__mobile-row__header {
+  font-family: $font_bold;
+  font-weight: normal;
+}

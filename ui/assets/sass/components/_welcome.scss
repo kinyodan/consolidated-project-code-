@@ -1,0 +1,297 @@
+.welcome-section {
+  background: linear-gradient(86.97deg, rgba(255, 247, 238, 0.75) 39.5%, #FFE1B2 120.08%);
+  margin: -2rem;
+  padding: 0 150px 32px 150px;
+  position: relative;
+  isolation: isolate;
+  color: #000;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  &::before {
+    top: 0;
+    right: 0;
+    background: url("../images/welcome/welcome-bg-top.svg") right top no-repeat;
+  }
+
+  &::after {
+    bottom: 0;
+    left: 0;
+    background: url("../images/welcome/welcome-bg-bottom.svg") 66px 96% no-repeat;
+  }
+}
+
+.welcome-header {
+  display: flex;
+  align-items: center;
+
+  &__pic {
+    flex: 0 0 262px;
+
+    img {
+      @extend .fluid_img;
+    }
+  }
+
+  &__title {
+    font-family: $font_semibold;
+    font-size: 32px;
+  }
+
+  p {
+    font-size: 21px;
+    color: rgba(#000, 0.8);
+    margin-top: 0.5em;
+  }
+}
+
+.welcome-summary {
+  margin-bottom: 50px;
+
+  p {
+    color: rgba(#000, 0.8);
+    font-size: 21px;
+    margin-bottom: 0.75em;
+  }
+
+  .note {
+    display: block;
+    font-size: 18px;
+    font-family: $font-semibold;
+  }
+}
+
+.welcome-cma {
+  color: rgba(#000, 0.8);
+  margin-bottom: 50px;
+
+  &__title {
+    font-family: $font_semibold;
+    font-size: 26px;
+  }
+
+  p {
+    font-size: 21px;
+    margin-bottom: 1.5em;
+  }
+
+  blockquote {
+    max-width: 777px;
+    margin: 50px auto 0 auto;
+  }
+}
+
+.welcome-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+
+  .free-link {
+    font-size: 14px;
+    color: #000;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+/*---------- MEDIA QUERIES ----------*/
+@media only screen and (max-width: 1670px) {
+  .welcome-section {
+    padding: 0 32px 32px 32px;
+
+    &::before {
+      background-size: 18%;
+    }
+
+    &::after {
+      background-size: 25%;
+    }
+  }
+
+  .welcome-header {
+    &__pic {
+      flex: 0 0 180px;
+    }
+
+    &__title {
+      font-size: 26px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+  }
+
+  .welcome-summary {
+    margin-bottom: 40px;
+
+    p {
+      font-size: 18px;
+    }
+
+    .note {
+      font-size: 16px;
+    }
+  }
+
+  .welcome-cma {
+    margin-bottom: 40px;
+
+    &__title {
+      font-size: 22px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+    blockquote {
+      margin-top: 40px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .welcome-header {
+    &__pic {
+      flex: 0 0 160px;
+    }
+
+    &__title {
+      font-size: 24px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
+
+  .welcome-summary {
+    p {
+      font-size: 16px;
+    }
+
+    .note {
+      font-size: 14px;
+    }
+  }
+
+  .welcome-cma {
+    &__title {
+      font-size: 20px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
+}
+
+@media only screen and (max-width: 870px) {
+  .welcome-section {
+    margin: -1.4rem;
+  }
+
+  .welcome-header {
+    padding-top: 20px;
+
+    &__pic {
+      flex: 0 0 140px;
+    }
+
+    &__title {
+      font-size: 22px;
+    }
+  }
+
+  .welcome-summary,
+  .welcome-cma {
+    margin-bottom: 30px;
+  }
+
+  .welcome-cma blockquote {
+    margin-top: 30px;
+  }
+}
+
+@media only screen and (max-width: 670px) {
+  .welcome-section {
+    &::before {
+      background-size: 40%;
+    }
+
+    &::after {
+      background-position: 34px 96%;
+    }
+  }
+
+  .welcome-header {
+    &__pic {
+      flex: 0 0 120px;
+    }
+
+    &__title {
+      font-size: 20px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+
+  .welcome-summary {
+    p {
+      font-size: 14px;
+    }
+
+    .note {
+      font-size: 13px;
+    }
+  }
+
+  .welcome-cma {
+    &__title {
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+@media only screen and (max-width: 570px) {
+  .welcome-section {
+    padding: 0 20px 20px 20px;
+  }
+
+  .welcome-header {
+    padding-top: 14px;
+    flex-direction: column;
+    margin-bottom: 18px;
+    text-align: center;
+
+    &__pic {
+      flex: 0 0 100px;
+      width: 100px;
+    }
+
+    &__title {
+      font-size: 18px;
+    }
+  }
+
+  .welcome-summary {
+    text-align: center;
+  }
+}

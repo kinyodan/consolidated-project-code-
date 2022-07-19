@@ -1,0 +1,40 @@
+@import 'utilities/variables';
+@import 'utilities/mixins';
+@import 'base/fonts';
+@import 'base/general';
+
+// Import Layouts
+
+@import 'layouts/layout';
+@import 'layouts/dashboard';
+@import 'layouts/school-profile';
+
+// Import Components
+@import 'components/login';
+@import 'components/school-switcher';
+@import 'components/sidebar-menu';
+@import 'components/general-stats';
+@import 'components/dialog';
+@import 'components/modal';
+@import 'components/details-modal';
+@import 'components/form-elements';
+@import 'components/filters';
+@import 'components/school-data-table';
+@import 'components/alert';
+@import 'components/cart';
+@import 'components/payment-method';
+@import 'components/chart';
+
+// Import Vendors
+@import 'vendors/vuetify-custom';
+
+// Import Pages
+@import 'pages/error-page';
+@import 'pages/thank-you-page';
+
+// Import Media Queries
+@import 'base/media-queries';
+
+
+
+

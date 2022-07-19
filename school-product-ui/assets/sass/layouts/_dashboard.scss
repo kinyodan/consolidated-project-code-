@@ -1,0 +1,85 @@
+.dashboard-app {
+  background-color: transparent !important;
+}
+
+.dashboard-grid {
+  display: grid;
+  gap: 3em;
+  background-color: transparent !important;
+}
+
+.analytics {
+  display: grid;
+  grid-template-columns:1fr 21rem;
+  gap: 2em;
+
+  .span-two {
+    grid-column: span 2;
+  }
+
+  &__stats {
+    display: grid;
+    gap: 2em;
+  }
+}
+
+.charts-layout {
+  display: grid;
+  grid-template-columns:1fr 20% 20%;
+  gap: 2em;
+
+  .span-col-three {
+    grid-column: span 3;
+  }
+
+  .row_table_action {
+    border: 0 none;
+  }
+}
+
+/*---------- MEDIA QUERIES ----------*/
+@media only screen and (max-width: 1670px) {
+  .charts-layout {
+    grid-template-columns:1fr 1fr;
+
+    .span-col-three {
+      grid-column: span 2;
+    }
+
+    .career-pathways-chart {
+      grid-column: span 2;
+    }
+  }
+}
+
+@media only screen and (max-width: 870px) {
+  .analytics {
+    grid-template-columns:1fr;
+
+    .span-two {
+      grid-column: auto;
+    }
+
+    &__stats {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+@media only screen and (max-width: 670px) {
+  .analytics__stats {
+    grid-template-columns: 1fr;
+  }
+
+  .charts-layout {
+    grid-template-columns:1fr;
+
+    .span-col-three {
+      grid-column: span 1;
+    }
+
+    .career-pathways-chart {
+      grid-column: span 1;
+    }
+  }
+}

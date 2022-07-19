@@ -1,0 +1,53 @@
+.school-switcher {
+  margin-right: 10px;
+
+  .styled-select {
+    position: relative;
+    border-color: $orange;
+    background: none transparent;
+
+    &::before {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      inset: 0 12px 0 auto;
+      margin: auto;
+      font-size: 16px;
+      color: $orange;
+      pointer-events: none;
+    }
+
+    select {
+      padding: 10px 44px 10px 10px;
+      max-width: 250px;
+      text-overflow: ellipsis;
+      color: $orange;
+
+      option {
+        color: #333;
+      }
+    }
+  }
+
+  &__mobile {
+    display: none;
+    position: absolute;
+    bottom: 60px;
+    width: 100%;
+
+    .school-switcher {
+      margin-left: 10px;
+    }
+  }
+}
+
+/*---------- MEDIA QUERIES ----------*/
+@media only screen and (max-width: 768px) {
+  .school-switcher__mobile {
+    display: block;
+
+    .v-menu__content {
+      max-width: 226px;
+    }
+  }
+}

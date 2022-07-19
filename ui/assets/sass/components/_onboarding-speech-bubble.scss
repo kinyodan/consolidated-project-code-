@@ -1,0 +1,29 @@
+.speech-bubble {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+  margin-bottom: 34px;
+
+  .congrats__memoji {
+    flex-basis: 156px;
+  }
+
+  .bubble {
+    flex: 1;
+    background-color: #E3F2FD;
+    color: $blue;
+    padding: 20px;
+    font-size: 1.12rem;
+    line-height: 1.4;
+    border-radius: 20px;
+
+    strong {
+      font-weight: normal;
+      font-family: $font_semibold;
+    }
+
+    ul {
+      margin: 0.72em 0 0.72em 30px;
+    }
+  }
+}

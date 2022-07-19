@@ -1,0 +1,2083 @@
+@media only screen and (max-width: 1920px) {
+  .app_header {
+    //background:black;
+  }
+}
+
+//Max width 1920
+
+@media only screen and (max-width: 1600px) {
+
+  .congrats {
+    gap: 50px;
+    padding: 38px;
+
+    &__memoji {
+      flex-basis: 190px;
+    }
+
+    &__header {
+      .title {
+        font-size: 2.2rem;
+      }
+
+      .confetti {
+        width: 42px;
+        height: 42px;
+      }
+    }
+  }
+
+  .congrats__summary,
+  .assessment-sections__summary {
+    font-size: 1.12rem;
+  }
+
+  .assessment-sections__cards {
+    grid-template-columns: repeat(auto-fill, minmax(15.5rem, 1fr));
+  }
+
+  .question_sheet_excerpt {
+    margin-bottom: 0;
+
+    h4 {
+      font-size: 1.2rem;
+    }
+
+    p.excerpt {
+      font-size: 1.5rem;
+    }
+  }
+
+  .section-complete__popup {
+    .congrats__memoji {
+      flex-basis: 200px;
+      width: 200px;
+      height: 200px;
+    }
+
+    .popup-title {
+      font-size: 48px;
+      margin-bottom: 0.3em;
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
+  }
+
+  .motivational-message__popup {
+    filter: drop-shadow(3px 10px 10px rgba(0, 0, 0, 0.25));
+
+    #partySVG {
+      top: -80px;
+      left: -86px;
+    }
+
+    .message-label {
+      border-radius: 20px;
+
+      .party-bubbles {
+        width: 100px;
+      }
+
+      span {
+        font-size: 18px;
+        max-width: 140px;
+      }
+    }
+  }
+
+  .progress-card {
+    grid-template-columns:120px 1fr;
+    padding-top: 10px;
+  }
+
+  .applications-card {
+    padding: 34px;
+  }
+
+  .progress-card__bar-wrapper.complete::after {
+    width: 50px;
+    height: 60px;
+  }
+  .progress-card__title,
+  .recommendations-header__title,
+  .applications-card__title {
+    font-size: 20px;
+  }
+
+  .progress-card p,
+  .recommendations-section p,
+  .course-card__links a {
+    font-size: 16px;
+  }
+
+  .application-steps {
+    margin: 0 -2rem 40px -2rem;
+
+    > li {
+      &::before {
+        width: 36px;
+        height: 36px;
+      }
+
+      &::after {
+        top: 16px;
+      }
+
+      span {
+        font-size: 12px;
+      }
+
+      &.done {
+        &::before {
+          font-size: 10px;
+        }
+      }
+
+      &.pending {
+        &::before {
+          font-size: 14px;
+          box-shadow: 0 0 0 2px #fff inset;
+          border-width: 1px;
+        }
+      }
+    }
+  }
+
+  .recommendations-section,
+  .applications-card {
+    margin-top: 40px;
+  }
+
+  .recommendation-cards {
+    margin-bottom: 40px;
+  }
+
+  .recommendations-header {
+    margin-bottom: 30px;
+    padding: 0 24px;
+  }
+
+  .course-card {
+    padding: 30px;
+    gap: 25px;
+
+    &__title {
+      font-size: 18px;
+    }
+
+    &__pic {
+      width: 100px;
+    }
+
+    &__links {
+      gap: 6px;
+
+      a {
+        &::after {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  .custom-select {
+    &::after {
+      right: 14px;
+    }
+
+    select {
+      height: 48px;
+      padding: 0 46px 0 18px;
+    }
+  }
+
+  .subject-choice-header {
+    font-size: 16px;
+    gap: 0 15px;
+    padding-right: 50px;
+
+    &__pic {
+      flex: 0 0 120px;
+      width: 120px;
+    }
+
+    &__title {
+      font-size: 20px;
+    }
+  }
+
+  .all-career-pathways {
+    margin-top: 40px;
+
+    &__title {
+      font-size: 20px;
+    }
+
+    .custom-select {
+      margin-bottom: 40px;
+    }
+  }
+
+  .course-categories {
+    padding: 26px;
+
+    &__title {
+      font-size: 20px;
+    }
+
+    p.summary {
+      font-size: 16px;
+    }
+
+    &__listing {
+      gap: 18px;
+
+      .category {
+        padding: 14px;
+        font-size: 14px;
+
+        &::after {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  .course-subjects {
+    font-size: 16px;
+
+    &__title {
+      font-size: 18px;
+    }
+  }
+}
+
+//Max width 1600
+
+//Max width 1366
+@media only screen and (max-width: 1366px) {
+  .app_header_title {
+    font-size: 2rem;
+  }
+
+  .congrats {
+    gap: 40px;
+    padding: 30px;
+
+    &__memoji {
+      flex-basis: 160px;
+    }
+
+    &__header {
+      .title {
+        font-size: 2rem;
+      }
+
+      .confetti {
+        width: 36px;
+        height: 36px;
+      }
+    }
+  }
+
+  .speech-bubble .congrats__memoji {
+    flex-basis: 130px;
+  }
+
+  .assessment_section_header {
+    margin-bottom: 1rem;
+    padding: 1.4rem 2rem;
+
+    .section-title {
+      font-size: 1.3rem;
+    }
+  }
+
+  .question_sheet_excerpt {
+    p {
+      font-size: 16px;
+    }
+
+    p.excerpt {
+      font-size: 1rem;
+    }
+
+    h4 {
+      font-size: 1rem;
+    }
+  }
+
+  table.tabular-questions {
+    th {
+      font-size: 16px;
+    }
+
+    td {
+      font-size: 14px;
+    }
+  }
+
+  .answer_container {
+    font-size: 14px;
+  }
+
+  .user_profiles {
+    li {
+      h3 {
+        font-size: 20px;
+        line-height: 28px;
+      }
+    }
+  }
+
+  .dashboard_banner {
+    height: 300px;
+    padding: 2rem;
+  }
+
+  .section-complete__popup {
+    max-width: 650px;
+
+    .congrats__memoji {
+      flex-basis: 200px;
+      width: 200px;
+      height: 200px;
+    }
+
+    .popup-title {
+      font-size: 38px;
+      margin-bottom: 0.3em;
+    }
+
+    p {
+      font-size: 1.1rem;
+    }
+  }
+
+  .assessment-complete {
+    height: calc(100vh - 174px);
+  }
+
+  .subject-choice-header {
+    padding-right: 30px;
+  }
+
+  .congrats__summary,
+  .assessment-sections__summary,
+  .speech-bubble .bubble {
+    font-size: 16px;
+  }
+
+  .assessment-sections .section-card__content .title-name {
+    font-size: 16px;
+  }
+
+  .course-card__links a {
+    font-size: 14px;
+  }
+}
+
+//Max width 1366
+
+//Max width 1280
+
+@media only screen and (max-width: 1280px) {
+  .app_wrapper {
+    left: -250px;
+  }
+
+  .app_content {
+    -webkit-flex-basis: 100%;
+    flex-basis: 100%;
+    left: 0;
+  }
+
+  .app_header_title {
+    font-size: 1.8rem;
+  }
+
+  .congrats {
+    gap: 40px;
+    padding: 30px;
+
+    &__memoji {
+      flex-basis: 140px;
+    }
+
+    &__header {
+      margin-bottom: 0.6rem;
+
+      .title {
+        font-size: 1.8rem;
+      }
+
+      .confetti {
+        width: 32px;
+        height: 32px;
+        margin-left: 18px;
+      }
+    }
+  }
+
+  .nav-open {
+    .app_wrapper {
+      left: 0px;
+      overflow-x: hidden;
+    }
+  }
+
+  .menu_toggle {
+    display: flex;
+  }
+
+  .menu_collapse {
+    display: none;
+  }
+
+  .app_navigation--collapse {
+    width: 250px;
+
+    .nav_logo {
+      opacity: 1;
+    }
+  }
+
+  .user_profiles {
+    li {
+      margin: 0;
+
+      h3 {
+        max-width: 80%;
+      }
+    }
+  }
+
+  .assessment_section_header .section-title {
+    font-size: 1.5rem;
+  }
+
+  .section-complete__popup {
+    .congrats__memoji {
+      flex-basis: 200px;
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  .assessment-complete {
+    height: calc(100vh - 170px);
+
+    .section-complete__popup {
+      max-width: 800px;
+    }
+  }
+
+}
+
+//Max width 1280
+
+
+@media only screen and (max-width: 1100px) {
+  .future_shaper_logo {
+    max-width: 280px;
+  }
+
+  .app_header_title {
+    font-size: 1.6rem;
+    margin-top: 0.5rem;
+  }
+
+  .congrats {
+    gap: 30px;
+    padding: 30px;
+
+    &__memoji {
+      flex-basis: 120px;
+      border-width: 5px;
+    }
+
+    &__header {
+
+      .title {
+        font-size: 1.6rem;
+      }
+
+      .confetti {
+        width: 26px;
+        height: 26px;
+        margin-left: 18px;
+      }
+    }
+  }
+
+  .speech-bubble .congrats__memoji {
+    flex-basis: 100px;
+  }
+
+  .assessment-sections__cards {
+    grid-template-columns: repeat(auto-fill, minmax(14.3rem, 1fr));
+  }
+
+  .assessment_section_header .section-title {
+    font-size: 1.4rem;
+  }
+
+  .question_sheet_excerpt {
+    p {
+      max-width: initial;
+
+      &.excerpt {
+        font-size: 1.2rem;
+      }
+    }
+
+  }
+
+
+  .user_profiles {
+    li {
+      h3 {
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 0.2px;
+      }
+    }
+  }
+
+  .user_profile_avatar {
+    flex-basis: 120px;
+  }
+
+  .modal-content {
+    max-width: 900px;
+  }
+
+  .dashboard_highlight {
+    .card {
+      padding: 1.5rem;
+
+      h4 {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .dash_banner_content {
+    h3 {
+      font-size: 30px;
+    }
+  }
+
+  .section-complete__popup {
+    .congrats__memoji {
+      flex-basis: 180px;
+      width: 180px;
+      height: 180px;
+    }
+
+    .popup-title {
+      font-size: 38px;
+    }
+  }
+
+  .motivational-message__popup {
+
+    #partySVG {
+      width: 220px;
+      height: 120px;
+      top: -66px;
+      left: -78px;
+      background-position: center 34px;
+      background-size: 54px;
+    }
+
+    .message-label {
+      .party-bubbles {
+        width: 90px;
+        height: 60px;
+      }
+
+      span {
+        font-size: 16px;
+        max-width: 124px;
+      }
+    }
+  }
+
+  .progress-card__title,
+  .recommendations-header__title,
+  .applications-card__title {
+    font-size: 18px;
+  }
+
+  .recommendations-header {
+    padding: 0 20px;
+  }
+
+  .progress-card p,
+  .recommendations-section p,
+  .course-card__links a {
+    font-size: 14px;
+  }
+
+  .applications-card {
+    padding: 28px;
+  }
+
+  .recommendation-cards {
+    gap: 30px;
+  }
+
+  .course-card__title {
+    font-size: 16px;
+  }
+
+  .application-steps {
+    margin: 0 -1.5rem 30px -1.5rem;
+
+    > li {
+      &::before {
+        width: 30px;
+        height: 30px;
+      }
+
+      &::after {
+        top: 13px;
+      }
+
+      span {
+        font-size: 12px;
+      }
+
+      &.done {
+        &::before {
+          font-size: 8px;
+        }
+      }
+
+      &.pending {
+        &::before {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  .subject-choice-header {
+    font-size: 14px;
+    padding-right: 20px;
+
+    &__title {
+      font-size: 18px;
+    }
+  }
+
+  .all-career-pathways {
+    &__title {
+      font-size: 18px;
+    }
+  }
+
+  .course-categories {
+    &__title {
+      font-size: 18px;
+    }
+
+    p.summary {
+      font-size: 14px;
+    }
+  }
+
+  .course-subjects {
+    padding: 26px;
+    font-size: 16px;
+
+    &__title {
+      font-size: 18px;
+    }
+  }
+
+  .assessment-complete {
+    height: calc(100vh - 157px);
+
+    .section-complete__popup {
+      max-width: 730px;
+    }
+  }
+
+}
+
+//Max width 1100
+
+
+@media only screen and (max-width: 960px) {
+  .report_excerpt {
+    padding: 1.5rem;
+    margin-left: 2rem;
+    max-width: 240px;
+  }
+
+  .report_section {
+    padding: 1.5rem 2rem;
+  }
+
+  .top_three_career {
+    padding: 1.3rem 2rem;
+    max-width: 330px;
+  }
+
+  .user_profiles {
+    li {
+      h3 {
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.2px;
+      }
+    }
+  }
+
+  .my_packages_section {
+    display: block;
+  }
+
+  .modal-dialog {
+    margin: 2rem;
+  }
+  .modal-body {
+    padding: 2rem;
+  }
+
+  .modal-footer {
+    padding: 1rem 2rem;
+  }
+
+  .close_modal {
+    right: 2rem;
+    top: 1.5rem;
+  }
+
+  .dashboard_highlight {
+    .card {
+      margin-bottom: 2rem;
+      height: auto;
+      //padding:1.5rem;
+      //h4{
+      //  font-size: 16px;
+      //}
+    }
+
+    .col-xl-6 {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+
+  .report_header {
+    padding: 1.5rem 2rem;
+  }
+
+  .report_title {
+    font-size: 24px;
+  }
+
+  .footer_first_page {
+    padding: 1rem 2rem;
+  }
+
+}
+
+//max width 960
+
+@media only screen and (max-width: 768px) {
+  .report_header_left {
+    p {
+      display: none;
+    }
+  }
+
+  .footer_first_page {
+    padding: 1rem 1.5rem;
+  }
+
+  .report_grid_excerpt {
+    p {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  .report_logo {
+    margin-right: 0;
+
+    &:after {
+      display: none;
+    }
+  }
+
+  .columnize_list {
+    -moz-column-count: unset;
+    column-count: unset;
+    grid-column-gap: unset;
+    -moz-column-gap: unset;
+    column-gap: unset;
+  }
+
+  .report_excerpt {
+    padding: 1rem;
+    margin-left: 1.5rem;
+    max-width: 200px;
+
+    img {
+      max-width: 130px;
+    }
+
+    h2 {
+      font-size: 18px;
+    }
+  }
+
+  .report_banner {
+    height: 220px;
+  }
+
+  .report_section {
+    padding: 1.5rem;
+  }
+
+  .top_three_career {
+    padding: 1rem 1.5rem;
+    max-width: 280px;
+    min-height: auto;
+
+    h3 {
+      font-size: 18px;
+    }
+  }
+
+  .assessment_section_header {
+    margin: -1.4rem -1.4rem 1rem -1.4rem;
+    padding: 1.4rem;
+  }
+
+  .assessment_test_title {
+    font-size: 28px;
+    line-height: 30px;
+  }
+
+  .question_sheet_excerpt {
+    h3 {
+      font-size: 24px;
+    }
+  }
+
+
+  .dashboard_banner {
+    height: 260px;
+    padding: 1.5rem;
+
+    h3 {
+      font-size: 24px;
+      max-width: 500px;
+    }
+  }
+
+  .card_heading {
+    font-size: 18px;
+    margin-bottom: 1.2rem;
+  }
+
+  .user_profiles {
+    li {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .modal-dialog {
+    margin: 1.4rem;
+  }
+  .modal-body {
+    padding: 1.4rem;
+  }
+
+  .modal-footer {
+    padding: 1rem 1.4rem;
+  }
+
+  .custom_radio {
+    margin-bottom: 1.5rem;
+    font-size: 18px;
+    padding: 1.4rem;
+
+    .checkmark {
+      top: 1.4rem;
+      right: 1.4rem;
+    }
+  }
+
+  .close_modal {
+    right: -1rem;
+    top: -1rem;
+    border-radius: 50%;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    text-indent: -9999px;
+    background-size: 12px;
+  }
+
+  .form_sheet h2 {
+    font-size: 18px;
+    margin-bottom: 1.5rem;
+  }
+
+  .app_header {
+    padding: 1rem 1.4rem;
+  }
+
+  .app_main_inner {
+    padding: 1.4rem;
+  }
+
+  .success_message_excerpt {
+    h4 {
+      font-size: 32px;
+      line-height: 38px;
+    }
+
+    p {
+      font-size: 17px;
+    }
+  }
+
+  .text_title {
+    font-size: 32px;
+    margin-bottom: 2rem;
+  }
+
+  .user_profile_avatar {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1rem;
+  }
+
+  .report_text_sheet {
+    border-radius: 0;
+    margin-bottom: 0px;
+    border: none;
+    background: transparent;
+
+    table {
+      border: none !important;
+      margin-bottom: 0;
+    }
+
+    thead {
+      display: none;
+    }
+
+    table td:before {
+      content: attr(data-label);
+      float: left;
+      font-family: $font_bold;
+      font-weight: normal;
+      font-size: 16px;
+      margin-bottom: 10px;
+      width: 100%;
+      display: block;
+    }
+
+    tbody tr {
+      background: #FFFFFF;
+      border: 1px solid #f2f4f6;
+      display: block;
+      margin-bottom: 2rem;
+
+      td {
+        padding: 1rem;
+        border: 0;
+        border-bottom: 1px solid #f2f4f6;
+        display: block;
+
+        &:last-of-type {
+          border: none;
+        }
+      }
+    }
+  }
+
+  .report_footer {
+    padding: 0 1.5rem;
+  }
+
+  .assessment-sections {
+    margin: 0 -1.4rem 34px -1.4rem;
+    padding: 1.4rem;
+  }
+
+  .answer_container {
+    margin-left: 2.2rem;
+  }
+
+  table.tabular-questions {
+    border: 0;
+
+    thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+
+    tr {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      padding-top: 1rem;
+      padding-bottom: 1.3rem;
+      border-top: 1px solid #FFC364;
+
+      &:first-child {
+        padding-top: 0;
+        border-top: 0 none;
+      }
+    }
+
+    td {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      flex-basis: 100%;
+      border: 0 none;
+      padding: 0.4rem;
+
+      &::before {
+        content: attr(data-label);
+        font-size: 1rem;
+      }
+    }
+
+    .answer_container {
+      margin: 0 2rem 0 50px;
+      position: relative;
+    }
+
+    .q-number,
+    .question {
+      display: inline-block
+    }
+
+    .q-number {
+      padding-left: 0;
+      flex: 0 0 50px;
+    }
+
+    .question {
+      flex: 1;
+
+      .text {
+        max-width: none;
+      }
+    }
+  }
+
+  .course-card {
+    padding: 20px;
+  }
+
+  .course-categories {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    border-radius: 0;
+    padding: 0;
+
+    &__header {
+      margin: 0;
+      padding: 26px;
+      z-index: 10;
+    }
+
+    &__close {
+      right: 12px;
+      top: 12px;
+    }
+
+    &__listing {
+      grid-auto-rows: max-content;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 120px 26px 26px 26px;
+    }
+  }
+
+  .course-subjects {
+    position: fixed;
+  }
+
+  .assessment-complete {
+    margin: -1.4rem;
+  }
+
+  .custom-select {
+    &::after {
+      right: 8px;
+      font-size: 18px;
+    }
+
+    select {
+      height: 40px;
+      padding: 0 34px 0 12px;
+      font-size: 12px;
+    }
+  }
+
+}
+
+//max width 768
+
+//max width 670
+@media only screen and (max-width: 670px) {
+  .salutation {
+    display: none;
+  }
+  .app_header_title {
+    font-size: 1.4rem;
+  }
+
+  .assessment-sections {
+    &__cards {
+      grid-template-columns: 1fr;
+    }
+
+    .section-card {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+
+      &__pic {
+        margin-bottom: 0;
+        flex-basis: 110px;
+        border-radius: 5px;
+
+        img {
+          aspect-ratio: 1;
+          object-fit: cover;
+        }
+      }
+
+      &__content {
+        flex: 1;
+      }
+    }
+  }
+
+  .congrats {
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+
+    &__memoji {
+      flex-basis: 80px;
+    }
+
+    &__header {
+      .title {
+        font-size: 1.4rem;
+      }
+
+      .confetti {
+        width: 20px;
+        height: 20px;
+        margin-left: 14px;
+      }
+    }
+  }
+
+  .speech-bubble {
+    gap: 16px;
+
+    .congrats__memoji {
+      flex-basis: 70px;
+    }
+  }
+
+  .congrats__summary,
+  .assessment-sections__summary,
+  .speech-bubble .bubble {
+    font-size: 14px;
+  }
+
+  .assessment_section_header .section-title {
+    font-size: 1.2rem;
+  }
+
+  .section-complete {
+    padding: 0;
+    place-content: initial;
+    background-color: #fff;
+  }
+
+  .section-complete__popup {
+    animation-name: none;
+
+    .congrats__memoji {
+      flex-basis: 160px;
+      width: 160px;
+      height: 160px;
+    }
+  }
+
+  .motivational-message__popup {
+    .message-label {
+      .party-bubbles {
+        width: 80px;
+        height: 50px;
+      }
+
+      span {
+        font-size: 14px;
+        max-width: 110px;
+      }
+    }
+  }
+
+  .progress-card {
+    grid-template-columns:1fr;
+    padding: 20px;
+    overflow: initial;
+    margin-top: 27px;
+
+    &::after {
+      border-radius: 13px;
+      overflow: hidden;
+    }
+
+    &__pic {
+      position: relative;
+      width: 72px;
+      margin-top: -54px;
+      margin-left: -16px;
+
+    }
+
+    &__bar-wrapper,
+    &__btn-wrapper {
+      grid-column: 1;
+    }
+
+    &__bar-wrapper {
+      margin: 20px 0 32px 0;
+    }
+
+    &__btn-wrapper {
+      padding-bottom: 0;
+    }
+  }
+
+  .recommendation-cards {
+    grid-template-columns:1fr;
+  }
+
+  .course-card {
+    padding: 30px;
+  }
+
+  .applications-card .custom-select {
+    margin-bottom: 30px;
+  }
+
+  .application-steps {
+    grid-template-columns:1fr;
+    margin: 0 auto 30px auto;
+    gap: 30px;
+    max-width: 200px;
+
+    > li {
+      display: flex;
+      align-items: center;
+      text-align: left;
+
+      &::before {
+        margin: 0;
+        flex: 0 0 30px;
+      }
+
+      &::after {
+        left: 13px;
+        width: 4px;
+        height: calc(100% + 30px);
+      }
+
+      span {
+        max-width: none;
+        margin: 0 0 0 5px;
+      }
+
+      &:last-child::after {
+        content: none;
+      }
+
+      &.done::after {
+        left: 13px;
+      }
+    }
+  }
+
+  .subject-choice-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    margin-top: 27px;
+    overflow: initial;
+
+    &__pic {
+      flex: 0 0 72px;
+      width: 72px;
+      margin-top: -54px;
+      margin-left: -16px;
+    }
+
+    &__text {
+      padding-top: 0;
+    }
+
+    .page_cta {
+      margin-left: initial;
+    }
+  }
+
+  .section-complete__popup .popup-title {
+    font-size: 32px;
+  }
+
+  .assessment-complete {
+    height: calc(100vh - 152px);
+  }
+}
+
+//max width 670
+
+
+@media only screen and (max-width: 500px) {
+  .future_shaper_logo {
+    max-width: 220px;
+  }
+
+  .report_text_sheet {
+    p {
+      margin-bottom: 1rem;
+    }
+
+    tbody tr {
+      margin-bottom: 1rem;
+    }
+  }
+
+
+  .check_list li {
+    margin-bottom: 1rem;
+  }
+
+  .report_user_dt {
+    table {
+      margin: 0;
+      width: 100%;
+    }
+  }
+
+  .report_excerpt img {
+    max-width: 100px;
+  }
+
+  .report_excerpt {
+    padding: 1rem;
+    margin-left: 1.5rem;
+    max-width: 160px;
+  }
+
+  .report_banner {
+    height: 180px;
+  }
+
+  .report_header {
+    padding: 1rem;
+  }
+
+  .report_header_right {
+    width: 50%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .report_section {
+    padding: 1rem;
+  }
+
+  .report_title {
+    font-size: 18px;
+    margin-bottom: 1rem;
+  }
+
+  .report_grid_excerpt {
+    h4 {
+      font-size: 16px;
+    }
+  }
+
+  .report_number {
+    width: 38px;
+    height: 38px;
+    font-size: 16px;
+  }
+
+  .report_ideal_grid {
+    grid-template-columns: 40px 1fr;
+    margin-bottom: 1.2rem;
+  }
+
+  .report_user_dt table tr td, .report_user_dt table tr th {
+    padding: 8px 0;
+    text-align: left;
+    display: block;
+  }
+
+  .dashboard_banner {
+    height: 220px;
+
+    h3 {
+      font-size: 18px;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  .dashboard_banner_section {
+    .bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
+      bottom: 1rem;
+    }
+  }
+
+  .dashboard_highlight {
+    .card {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  .modal-footer {
+    .page_cta {
+      min-width: auto;
+      padding: 0 28px;
+      height: 42px;
+    }
+  }
+
+  .menu_toggle, .notification_tigger, .user_modal {
+    height: 70px;
+  }
+
+  .menu_toggle {
+    margin-right: 0;
+  }
+
+  .app_header {
+    padding-top: 0;
+  }
+
+  .app_header_left {
+    .salutation {
+      display: none;
+    }
+  }
+
+  .app_header_title {
+    font-size: 1.2rem;
+    margin-top: 0;
+  }
+
+  .salutation {
+    &.salut_mobile {
+      display: block;
+    }
+  }
+
+
+  .notifications_wrap {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .notif_list li a p {
+    width: 100%;
+  }
+
+  .user_modal, .notification_tigger {
+    width: 60px;
+  }
+
+  .user_modal {
+    .dropdown-menu:after {
+      right: 25px;
+    }
+  }
+
+  .notifications_wrap:after {
+    right: 84px;
+  }
+
+  .notifications_wrap {
+    top: 75px;
+  }
+
+  .user_modal {
+    .dropdown-menu {
+      top: 70px;
+    }
+  }
+
+  .notification_tigger {
+    .notif_count {
+      right: 14px;
+      top: 16px;
+    }
+  }
+
+  .success_message_excerpt {
+    p {
+      max-width: none;
+    }
+  }
+
+  .page_cta {
+    padding: 0 30px;
+    height: 44px;
+    font-size: 14px;
+    line-height: 42px;
+  }
+
+  .action_buttons {
+    margin-bottom: 1.5rem;
+
+    .page_cta {
+      &.inverse {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  .success_message_excerpt {
+    h4 {
+      font-size: 26px;
+      line-height: 32px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
+
+  .single_quiz_grid {
+
+    h4 {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  .answer_container {
+    margin-left: 1.8rem;
+  }
+
+  .question_sheet_excerpt {
+    h4 {
+      font-size: 15px;
+    }
+
+    p {
+      font-size: 14px;
+
+      &.excerpt {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .quiz_action_btns {
+    .quiz_next_btn, .quiz_back_btn {
+      padding: 0 40px;
+      height: 42px;
+      line-height: 40px;
+      font-size: 14px;
+      min-width: auto;
+    }
+  }
+
+  .report_footer {
+    padding: 0 1rem;
+  }
+
+  .footer_page_number {
+    height: 50px;
+    width: 50px;
+  }
+
+  .congrats {
+    margin-top: 30px;
+    margin-bottom: 22px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 0;
+    gap: 10px;
+
+    &__memoji {
+      flex-basis: auto;
+      width: 64px;
+      padding: 4px;
+      margin-top: -32px;
+    }
+
+    &__header {
+      .title {
+        font-size: 1rem;
+        margin-right: 14px;
+      }
+
+      .confetti {
+        width: 16px;
+        height: 16px;
+        margin-left: 6px;
+      }
+    }
+
+    &__summary {
+      font-size: 0.9rem;
+    }
+  }
+
+  .speech-bubble .congrats__memoji {
+    width: 64px;
+    flex-basis: 64px;
+  }
+
+  .assessment-sections {
+    margin-bottom: 22px;
+
+    &__cards {
+      gap: 20px;
+    }
+
+    .section-card {
+      gap: 16px;
+
+      &__pic {
+        flex-basis: 100px;
+      }
+
+      &__content {
+        .title-name {
+          font-size: 16px;
+        }
+
+        .info {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+  .users-taken-assessment {
+    .avatars .avatar-pic {
+      width: 28px;
+      margin-left: -7px;
+    }
+
+    .counter-statement {
+      font-size: 13px;
+    }
+  }
+
+  .speech-bubble {
+    margin-bottom: 22px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 0;
+    gap: 0;
+
+    .congrats__memoji {
+      margin: 0 0 0 20px;
+    }
+
+    .bubble {
+      margin-top: -32px;
+      border-radius: 10px;
+      padding-top: 42px;
+      font-size: 0.9rem;
+
+      ul {
+        margin-left: 20px;
+      }
+    }
+  }
+
+  .assessment_section_header {
+    padding: 1.2rem 1.4rem;
+
+    .section-title {
+      font-size: 1.1rem;
+    }
+  }
+
+  .answer_container {
+    font-size: 14px;
+
+    .checkmark {
+      top: 0px;
+    }
+  }
+
+  table.tabular-questions {
+    font-size: 16px;
+
+    td {
+      font-size: 16px;
+
+      &::before {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .section-complete__popup {
+    flex-direction: column-reverse;
+    gap: 20px;
+    justify-content: center;
+
+    .col {
+      &.left {
+        padding: 0 24px 24px 24px;
+        flex: none;
+      }
+
+      &.right {
+        flex: none;
+        padding-top: 24px;
+        height: auto;
+      }
+    }
+
+    .congrats__memoji {
+      flex-basis: 160px;
+      width: 160px;
+      height: 160px;
+      margin-top: 0;
+    }
+
+    .confetti-svg {
+      height: auto;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+
+  }
+
+  .progress-card__title,
+  .recommendations-header__title,
+  .applications-card__title {
+    font-size: 16px;
+    margin-bottom: 0.3em;
+  }
+
+  .progress-card p,
+  .recommendations-section p,
+  .course-card__links a {
+    font-size: 13px;
+  }
+
+  .applications-card {
+    padding: 20px;
+  }
+
+  .progress-card__bar-wrapper {
+    margin: 30px 0;
+
+    &.complete::after {
+      width: 40px;
+      height: 50px;
+      right: -14px;
+      top: 16px;
+    }
+  }
+
+  .recommendation-cards {
+    margin-bottom: 30px;
+  }
+
+  .course-card {
+    gap: 18px;
+
+    &__title {
+      font-size: 15px;
+    }
+  }
+
+  .subject-choice-header {
+    font-size: 13px;
+
+    &__title {
+      font-size: 16px;
+    }
+  }
+
+  .all-career-pathways {
+    &__title {
+      font-size: 16px;
+    }
+  }
+
+  .course-categories {
+    &__title {
+      font-size: 16px;
+      margin-bottom: 0.3em;
+    }
+
+    p.summary {
+      font-size: 13px;
+    }
+  }
+
+  .course-subjects {
+    font-size: 14px;
+
+    &__title {
+      font-size: 16px;
+    }
+
+    &__listing {
+      font-size: 12px;
+    }
+  }
+
+  .assessment-complete {
+    height: calc(100vh - 117px);
+  }
+
+
+}
+
+//max 500px
+
+
+@media only screen and (max-width: 330px) {
+  .app_header {
+    padding: 0;
+  }
+
+  .menu_toggle {
+    padding-right: 1.2rem;
+    padding-left: 1.2rem;
+
+    .menu_toggle_label {
+      display: none;
+    }
+  }
+
+
+  .app_main_inner {
+    padding: 1rem;
+  }
+
+  .modal-body {
+    padding: 1rem;
+  }
+
+  .modal-dialog {
+    margin: 1rem;
+  }
+
+  .custom_radio {
+    margin-bottom: 1rem;
+    font-size: 16px;
+    padding: 1rem;
+
+    .checkmark {
+      top: 1rem;
+      right: 1rem;
+    }
+  }
+
+  .modal-footer {
+    padding: .5rem 1rem;
+  }
+
+  .dashboard_banner {
+    height: auto;
+    padding: 1.5rem;
+  }
+
+  .dashboard_banner_section .bx-wrapper .bx-pager, .dashboard_banner_section .bx-wrapper .bx-controls-auto {
+    bottom: -18px;
+  }
+
+  .dashboard_highlight .card {
+    padding: 1rem;
+  }
+
+}
+
+//max 330px
+
+
+// Print Styles
+
+@media print {
+
+  * {
+    background: transparent !important;
+    color: $blue !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 0.5cm;
+  }
+
+  body {
+    color: $blue !important;
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  @page {
+    size: A4 landscape;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 2rem;
+    margin-bottom: 0;
+    -webkit-print-color-adjust: exact;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+
+  .report_banner {
+    background-image: url("https://ddasf3j8zb8ok.cloudfront.net/report/report_banner.jpeg") !important;
+  }
+
+  .report_excerpt {
+    background: $white !important;
+  }
+
+  .report_logo img {
+    max-width: 110px !important;
+  }
+
+  .report_number {
+    background: #FBA138 !important;
+    color: $white !important;
+  }
+
+  .check_list li {
+    background: url("https://ddasf3j8zb8ok.cloudfront.net/report/list_item.svg") no-repeat left 5px !important;
+  }
+
+  body, td, th, select, input, textarea {
+    color: #18244F !important;
+  }
+
+  .report_text_sheet table tr td .td_score, .report_text_sheet table tr th .td_score {
+    color: #38C976 !important;
+  }
+
+  .report_excerpt h2 {
+    color: $blue !important;
+  }
+
+  .top_three_career {
+    background: $blue !important;
+
+    h3 {
+      color: $white !important;
+    }
+  }
+
+  //.report_list li {
+  //  background: url("https://ddasf3j8zb8ok.cloudfront.net/report/list_item.svg") no-repeat left 5px !important;
+  //}
+
+  .report_list, .check_list {
+    list-style-type: disc !important;
+
+    li {
+      display: list-item !important;
+      background: none !important;
+      padding-left: 0 !important;
+      margin-left: 20px !important;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .footer_first_page {
+    background: #FDF8DE !important;
+  }
+
+
+}

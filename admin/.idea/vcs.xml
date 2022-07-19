@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/admin" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/adminapp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/administration/administration" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/admins" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/coreui-free-bootstrap-admin-template" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/coreui-free-vue-admin-template" vcs="Git" />
+  </component>
+</project>
